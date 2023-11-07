@@ -21,6 +21,8 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
 
     public final StringPath accessToken = createString("accessToken");
 
+    public final EnumPath<com.ptfinder.ptfinderback.domain.user.AccountType> accountType = createEnum("accountType", com.ptfinder.ptfinderback.domain.user.AccountType.class);
+
     public final DateTimePath<java.time.LocalDateTime> createdAt = createDateTime("createdAt", java.time.LocalDateTime.class);
 
     public final StringPath email = createString("email");

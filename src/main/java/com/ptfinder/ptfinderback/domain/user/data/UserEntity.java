@@ -1,5 +1,6 @@
 package com.ptfinder.ptfinderback.domain.user.data;
 
+import com.ptfinder.ptfinderback.domain.user.AccountType;
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import com.ptfinder.ptfinderback.domain.user.UserRole;
 import lombok.Builder;
@@ -37,6 +38,10 @@ public class UserEntity {
     @Enumerated(value = EnumType.STRING)
     private UserRole userRole;
 
+    @Column(name = "ACCOUNT_TYPE")
+    @Enumerated(value = EnumType.STRING)
+    private AccountType accountType;
+
     @Column(name = "ACCESS_TOKEN", length = 2000)
     private String accessToken;
 
@@ -50,11 +55,12 @@ public class UserEntity {
     private LocalDateTime updatedAt;
 
     @Builder
-    private UserEntity(String username, String email, String password, UserRole userRole) {
+    private UserEntity(String username, String email, String password, UserRole userRole, AccountType accountType) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.userRole = userRole;
+        this.accountType = accountType;
     }
 
     public static UserEntity create(UserDto userDto){
@@ -62,7 +68,8 @@ public class UserEntity {
                 .username(userDto.getUsername())
                 .email(userDto.getEmail())
                 .password(userDto.getPassword())
-                .userRole(UserRole.valueOf(userDto.getRole()))
+                .userRole(UserRole.valueOf(userDto.getUserRole()))
+                .accountType(AccountType.valueOf(userDto.getAccountType()))
                 .build();
     }
 

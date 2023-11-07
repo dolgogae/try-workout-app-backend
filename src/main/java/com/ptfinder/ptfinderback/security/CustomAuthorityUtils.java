@@ -21,7 +21,7 @@ public class CustomAuthorityUtils {
             throw new BusinessException(ErrorCode.USER_ROLE_DOES_NOT_EXISTS);
         } else if (!role.equals(USER.toString())
                 && !role.equals(ADMIN.toString())
-                && !role.equals(ANONYMOUS.toString())) {
+                && !role.equals(TRAINER.toString())) {
             throw new BusinessException(ErrorCode.USER_ROLE_INVALID);
         }
     }

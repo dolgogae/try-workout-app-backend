@@ -13,10 +13,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.parameters.P;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -46,6 +44,19 @@ public class UserController {
         UserResponseDto responseDto = userMappingProvider.userDtoToResponseDto(user);
 
         ResultResponse result = ResultResponse.of(ResultCode.GET_MY_INFO_SUCCESS, responseDto);
+        return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
+    }
+
+    @GetMapping("/get/account")
+    public ResponseEntity<ResultResponse> getUserByAccountType(
+            @RequestParam String accountType,
+            @RequestParam String email
+    ){
+
+        UserDto user = userService.getUserByAccountType(accountType, email);
+        UserResponseDto responseDto = userMappingProvider.userDtoToResponseDto(user);
+
+        ResultResponse result = ResultResponse.of(ResultCode.FIND_USER_SUCCESS, responseDto);
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
     }
 }

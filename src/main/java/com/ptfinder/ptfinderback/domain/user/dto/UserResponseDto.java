@@ -27,5 +27,5 @@ public class UserResponseDto {
     @Size(min = 2, message = "Password length must be greater than 2.")
     private String password;
 
-    private String role;
+    private String userRole;
 }

@@ -1,5 +1,6 @@
 package com.ptfinder.ptfinderback.domain.user.service;
 
+import com.ptfinder.ptfinderback.domain.user.AccountType;
 import com.ptfinder.ptfinderback.domain.user.UserMappingProvider;
 import com.ptfinder.ptfinderback.domain.user.UserRole;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
@@ -11,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -21,7 +24,8 @@ public class UserServiceImplV1 implements UserService{
 
     @Override
     public UserDto createUser(UserDto userDto) {
-        userDto.setRole(UserRole.ANONYMOUS.name());
+//        userDto.setRole(UserRole.TRAINER.name());
+        log.info(userDto.toString());
         UserEntity userEntity = UserEntity.create(userDto);
         UserEntity savedUser = userJpaRepository.save(userEntity);
 
@@ -62,6 +66,24 @@ public class UserServiceImplV1 implements UserService{
         UserEntity savedUser = userJpaRepository.save(user);
 
         UserDto userDto = userMappingProvider.userEntityToUserDto(savedUser);
+
+        return userDto;
+    }
+
+    @Override
+    public UserDto getUserByAccountType(String accountType, String email) {
+
+        AccountType type = AccountType.valueOf(accountType);
+
+        UserEntity findUser;
+        Optional<UserEntity> optionalUser = userJpaRepository.findByEmailAndAccountType(email, type);
+        if(optionalUser.isEmpty()){
+            return null;
+        } else {
+            findUser = optionalUser.get();
+        }
+
+        UserDto userDto = userMappingProvider.userEntityToUserDto(findUser);
 
         return userDto;
     }
