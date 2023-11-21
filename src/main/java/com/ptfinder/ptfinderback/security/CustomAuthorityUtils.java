@@ -19,7 +19,7 @@ public class CustomAuthorityUtils {
     public static void verifiedRole(String role) {
         if (role == null) {
             throw new BusinessException(ErrorCode.USER_ROLE_DOES_NOT_EXISTS);
-        } else if (!role.equals(USER.toString())
+        } else if (!role.equals(MEMBER.toString())
                 && !role.equals(ADMIN.toString())
                 && !role.equals(TRAINER.toString())) {
             throw new BusinessException(ErrorCode.USER_ROLE_INVALID);

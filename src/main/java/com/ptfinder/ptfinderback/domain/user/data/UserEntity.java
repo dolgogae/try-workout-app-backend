@@ -1,5 +1,6 @@
 package com.ptfinder.ptfinderback.domain.user.data;
 
+import com.ptfinder.ptfinderback.domain.trainer.data.Trainer;
 import com.ptfinder.ptfinderback.domain.user.AccountType;
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import com.ptfinder.ptfinderback.domain.user.UserRole;
@@ -37,6 +38,10 @@ public class UserEntity {
     @Column(name = "ROLE")
     @Enumerated(value = EnumType.STRING)
     private UserRole userRole;
+
+    @Column(name = "TRAINER_ID")
+    @OneToOne(mappedBy = "user")
+    private Trainer trainer;
 
     @Column(name = "ACCOUNT_TYPE")
     @Enumerated(value = EnumType.STRING)

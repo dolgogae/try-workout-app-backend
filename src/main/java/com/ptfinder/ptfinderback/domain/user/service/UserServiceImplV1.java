@@ -25,7 +25,6 @@ public class UserServiceImplV1 implements UserService{
     @Override
     public UserDto createUser(UserDto userDto) {
 //        userDto.setRole(UserRole.TRAINER.name());
-        log.info(userDto.toString());
         UserEntity userEntity = UserEntity.create(userDto);
         UserEntity savedUser = userJpaRepository.save(userEntity);
 
