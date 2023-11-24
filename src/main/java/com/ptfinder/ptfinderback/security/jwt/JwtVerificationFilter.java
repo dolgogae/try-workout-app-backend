@@ -1,9 +1,10 @@
 package com.ptfinder.ptfinderback.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ptfinder.ptfinderback.global.error.ErrorResponse;
+import com.ptfinder.ptfinderback.global.error.exception.AuthenticationNotFoundException;
 import com.ptfinder.ptfinderback.global.error.exception.BusinessException;
 import com.ptfinder.ptfinderback.redis.RedisUtils;
-import com.ptfinder.ptfinderback.global.error.ErrorResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
@@ -25,9 +26,11 @@ public class JwtVerificationFilter extends OncePerRequestFilter {
     private static final List<String> EXCLUDE_URL =
             List.of("/",
                     "/h2",
-                    "/members/signup",
+                    "/auth/sign-up",
                     "/auth/login",
-                    "/auth/reissue");
+                    "/auth/login/callback",
+                    "/auth/reissue",
+                    "/trainer/create");
     private final JwtTokenProvider jwtTokenProvider;
     private final RedisUtils redisUtils;
 
@@ -41,14 +44,16 @@ public class JwtVerificationFilter extends OncePerRequestFilter {
             if (StringUtils.hasText(accessToken) && doNotLogout(accessToken)
                     && jwtTokenProvider.validateToken(accessToken, response)) {
                 setAuthenticationToContext(accessToken);
+            } else {
+                throw new AuthenticationNotFoundException();
             }
-            // TODO: 예외처리 리팩토링
         } catch (RuntimeException e) {
             if (e instanceof BusinessException) {
                 ObjectMapper objectMapper = new ObjectMapper();
                 String json = objectMapper.writeValueAsString(ErrorResponse.of(((BusinessException) e).getErrorCode()));
-                response.getWriter().write(json);
+                response.getOutputStream().write(json.getBytes());
                 response.setStatus(((BusinessException) e).getErrorCode().getStatus());
+                return;
             }
         }
         filterChain.doFilter(request, response);
@@ -62,6 +67,7 @@ public class JwtVerificationFilter extends OncePerRequestFilter {
     // EXCLUDE_URL과 동일한 요청이 들어왔을 경우, 현재 필터를 진행하지 않고 다음 필터 진행
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+//        log.info(request.getServletPath());
         boolean result = EXCLUDE_URL.stream().anyMatch(exclude -> exclude.equalsIgnoreCase(request.getServletPath()));
 
         return result;

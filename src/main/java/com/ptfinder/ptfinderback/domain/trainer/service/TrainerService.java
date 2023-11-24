@@ -5,4 +5,5 @@ import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 public interface TrainerService {
 
     TrainerDto createTrainer(TrainerDto trainerDto);
+    TrainerDto updateTrainerDiscountRate(Long trainerId, Float discountRate);
 }

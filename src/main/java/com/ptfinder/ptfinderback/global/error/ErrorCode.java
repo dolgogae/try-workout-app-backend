@@ -13,6 +13,7 @@ public enum ErrorCode {
     METHOD_NOT_ALLOWED(405, "C003", "method not allowed"),
     INVALID_TYPE_VALUE(400, "C004", "invalid type value"),
     BAD_CREDENTIALS(400, "C005", "bad credentials"),
+    TOKEN_NOT_EXIST(401, "C006", "token is null"),
 
     // User
     USER_NOT_EXIST(404, "M001", "member not exist"),

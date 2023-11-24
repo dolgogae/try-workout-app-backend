@@ -1,7 +1,6 @@
 package com.ptfinder.ptfinderback.domain.trainer.data;
 
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
-import com.ptfinder.ptfinderback.domain.review.data.Review;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
 import lombok.Builder;
@@ -28,8 +27,8 @@ public class Trainer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    @JoinColumn(name = "USER_ID")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID", unique = true)
     private UserEntity user;
 
     @Column(name = "FEE")
@@ -42,13 +41,10 @@ public class Trainer {
     private String introduction;
 
     @Column(name = "QUALIFICATIONS")
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.LAZY)
     private List<String> qualifications = new ArrayList<>();
 
-    @OneToMany(mappedBy = "trainer")
-    private List<Review> reviews = new ArrayList<>();
-
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "GYM_ID")
     private Gym gym;
 
@@ -75,8 +71,13 @@ public class Trainer {
                 .build();
     }
 
-    public Trainer setUser(UserEntity user){
+    public Trainer updateUser(UserEntity user){
         this.user = user;
+        return this;
+    }
+
+    public Trainer updateDiscountRate(Float discountRate){
+        this.discountRate = discountRate;
         return this;
     }
 }

@@ -16,7 +16,8 @@ public enum ResultCode {
     FIND_USER_SUCCESS(200, "U006", "계정 조회 완료"),
 
     // TRAINER
-    TRAINER_CREATE_SUCCESS(201, "TR001", "트레이너 생성을 성공했습니다.");
+    TRAINER_CREATE_SUCCESS(201, "TR001", "트레이너 생성을 성공했습니다."),
+    TRAINER_UPDATE_SUCCESS(200, "TR002", "트레이너 정보 업데이트에 성공했습니다.");
 
     private int status;
     private final String code;

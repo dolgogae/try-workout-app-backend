@@ -11,10 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -29,9 +26,23 @@ public class TrainerController {
     public ResponseEntity<ResultResponse> createTrainer(
             @RequestBody TrainerRequestDto trainerRequestDto
     ){
+        log.info(String.valueOf(trainerRequestDto.getUserId()));
         TrainerDto trainerDto = mapper.map(trainerRequestDto, TrainerDto.class);
         TrainerDto trainer = trainerService.createTrainer(trainerDto);
         TrainerResponseDto trainerResponseDto = mapper.map(trainer, TrainerResponseDto.class);
+
+        ResultResponse result = ResultResponse.of(ResultCode.TRAINER_CREATE_SUCCESS, trainerResponseDto);
+        return new ResponseEntity<>(result, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{trainerId}/discount")
+    public ResponseEntity<ResultResponse> updateDiscountRate(
+            @RequestHeader String token,
+            @PathVariable Long trainerId,
+            @RequestBody Float discountRate
+    ){
+        TrainerDto trainerDto = trainerService.updateTrainerDiscountRate(trainerId, discountRate);
+        TrainerResponseDto trainerResponseDto = mapper.map(trainerDto, TrainerResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.TRAINER_CREATE_SUCCESS, trainerResponseDto);
         return new ResponseEntity<>(result, HttpStatus.CREATED);

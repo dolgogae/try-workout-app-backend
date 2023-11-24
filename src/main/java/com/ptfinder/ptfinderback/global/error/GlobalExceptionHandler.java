@@ -1,5 +1,6 @@
 package com.ptfinder.ptfinderback.global.error;
 
+import com.ptfinder.ptfinderback.global.error.exception.AuthenticationNotFoundException;
 import com.ptfinder.ptfinderback.global.error.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -47,6 +48,14 @@ public class GlobalExceptionHandler {
         final ErrorResponse response = ErrorResponse.of(errorCode, e.getErrors());
         return new ResponseEntity<>(response, HttpStatus.valueOf(errorCode.getStatus()));
     }
+
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleAuthenticationException(AuthenticationNotFoundException e) {
+        final ErrorCode errorCode = e.getErrorCode();
+        final ErrorResponse response = ErrorResponse.of(errorCode, e.getErrors());
+        return new ResponseEntity<>(response, HttpStatus.valueOf(errorCode.getStatus()));
+    }
+
 
     // 그 밖에 발생하는 모든 예외처리가 이곳으로 모인다.
     @ExceptionHandler(Exception.class)

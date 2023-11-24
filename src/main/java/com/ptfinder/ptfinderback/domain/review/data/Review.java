@@ -29,11 +29,11 @@ public class Review {
     @Column(name = "CONTENT")
     private String content;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TRAINER_ID")
     private Trainer trainer;
 

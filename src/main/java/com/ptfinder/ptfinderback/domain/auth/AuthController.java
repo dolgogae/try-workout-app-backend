@@ -35,7 +35,7 @@ public class AuthController {
                     content = @Content(schema = @Schema(implementation = UserRequestDto.class)))
     })
     @PostMapping("/sign-up")
-    public ResponseEntity<ResultResponse> signIn(
+    public ResponseEntity<ResultResponse> signUp(
             @RequestBody UserRequestDto userRequestDto
     ){
         log.info(userRequestDto.toString());
@@ -43,8 +43,6 @@ public class AuthController {
         userRequestDto.setPassword(passwordEncoder.encode(userRequestDto.getPassword()));
         UserDto userDto = mapper.map(userRequestDto, UserDto.class);
         UserDto user = userService.createUser(userDto);
-
-        log.info("create user = {}", user.toString());
 
         UserResponseDto responseDto = mapper.map(user, UserResponseDto.class);
 
@@ -68,7 +66,7 @@ public class AuthController {
 
         log.info(tokenDto.toString());
 
-        ResultResponse result = ResultResponse.of(ResultCode.REGISTER_SUCCESS, tokenDto);
+        ResultResponse result = ResultResponse.of(ResultCode.LOGIN_SUCCESS, tokenDto);
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
     }
 

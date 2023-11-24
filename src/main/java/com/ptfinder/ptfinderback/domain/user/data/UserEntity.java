@@ -2,8 +2,8 @@ package com.ptfinder.ptfinderback.domain.user.data;
 
 import com.ptfinder.ptfinderback.domain.trainer.data.Trainer;
 import com.ptfinder.ptfinderback.domain.user.AccountType;
-import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import com.ptfinder.ptfinderback.domain.user.UserRole;
+import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,7 +39,7 @@ public class UserEntity {
     @Enumerated(value = EnumType.STRING)
     private UserRole userRole;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Trainer trainer;
 
     @Column(name = "ACCOUNT_TYPE")

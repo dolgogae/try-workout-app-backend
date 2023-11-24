@@ -51,7 +51,7 @@ public class SecurityConfig {
                         .antMatchers(
                                 "/","/**",
                                 "/h2-console",
-                                "/login/**",
+                                "/api/login/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
                                 "/auth/**").permitAll()

@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -22,16 +23,31 @@ public class TrainerServiceV1 implements TrainerService{
     private final ModelMapper mapper;
 
     @Override
+    @Transactional
     public TrainerDto createTrainer(TrainerDto trainerDto) {
         Trainer trainer = Trainer.create(trainerDto);
-        UserEntity userEntity = userJpaRepository.findById(trainerDto.getUserId()).orElseThrow(()
-                -> new BusinessException(ErrorCode.USER_NOT_EXIST));
-        trainer.setUser(userEntity);
+        UserEntity userEntity = userJpaRepository.findById(trainerDto.getUserId()).orElseThrow(() ->
+                new BusinessException(ErrorCode.USER_NOT_EXIST));
+        trainer.updateUser(userEntity);
 
         Trainer savedTrainer = trainerJpaRepository.save(trainer);
 
         TrainerDto result = mapper.map(savedTrainer, TrainerDto.class);
+        result.setUserId(savedTrainer.getUser().getId());
+//        result.setGymId(savedTrainer.getGym().getId());
         log.info("create trainer = {}", result.toString());
+
+        return result;
+    }
+
+    @Override
+    public TrainerDto updateTrainerDiscountRate(Long trainerId, Float discountRate) {
+        Trainer trainer = trainerJpaRepository.findById(trainerId).orElseThrow(() ->
+                new BusinessException(ErrorCode.USER_NOT_EXIST));
+        trainer.updateDiscountRate(discountRate);
+
+        TrainerDto result = mapper.map(trainer, TrainerDto.class);
+        log.info("updated trainer = {}", result.toString());
 
         return result;
     }
