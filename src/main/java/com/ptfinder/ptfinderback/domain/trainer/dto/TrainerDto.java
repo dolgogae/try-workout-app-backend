@@ -1,7 +1,7 @@
 package com.ptfinder.ptfinderback.domain.trainer.dto;
 
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
-import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
+import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import lombok.*;
 
 @Data
@@ -12,9 +12,9 @@ import lombok.*;
 public class TrainerDto {
 
     private Long id;
-    private UserEntity user;
+    private Long userId;
     private Integer fee;
     private Float discountRate;
     private String introduction;
-    private Gym gym;
+    private Long gymId;
 }

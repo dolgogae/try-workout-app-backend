@@ -35,7 +35,6 @@ public class UserController {
         Claims claims = jwtTokenProvider.validateAndParseToken(refreshToken);
         String email = (String) claims.get("sub");
 
-
         log.info(claims.toString());
         // {sub = email 주소, iat=1694171245, exp=1694430445}
         log.info("user email {}", email);

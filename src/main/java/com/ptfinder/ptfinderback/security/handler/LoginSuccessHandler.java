@@ -29,7 +29,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     }
 
     private String getRedirectUrl(String accessToken, String refreshToken){
-        return "/auth/login/callback" +
+        return "/api/auth/login/callback" +
                 "?accessToken=" + accessToken +
                 "&refreshToken=" + refreshToken;
     }

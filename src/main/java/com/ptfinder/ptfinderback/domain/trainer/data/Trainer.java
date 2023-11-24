@@ -48,12 +48,6 @@ public class Trainer {
     @OneToMany(mappedBy = "trainer")
     private List<Review> reviews = new ArrayList<>();
 
-//    @Column(name = "PROGRAM_TITLE")
-//    private String programTitle;
-//
-//    @Column(name = "PROGRAM_CONTENT", length = 10000)
-//    private String programContent;
-
     @ManyToOne
     @JoinColumn(name = "GYM_ID")
     private Gym gym;
@@ -75,11 +69,14 @@ public class Trainer {
 
     public static Trainer create(TrainerDto trainerDto){
         return Trainer.builder()
-                .user(trainerDto.getUser())
                 .fee(trainerDto.getFee())
                 .discountRate(trainerDto.getDiscountRate())
                 .introduction(trainerDto.getIntroduction())
-                .gym(trainerDto.getGym())
                 .build();
+    }
+
+    public Trainer setUser(UserEntity user){
+        this.user = user;
+        return this;
     }
 }
