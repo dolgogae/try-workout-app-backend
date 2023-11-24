@@ -6,6 +6,7 @@ import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerResponseDto;
 import com.ptfinder.ptfinderback.domain.trainer.service.TrainerService;
 import com.ptfinder.ptfinderback.global.result.ResultCode;
 import com.ptfinder.ptfinderback.global.result.ResultResponse;
+import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;

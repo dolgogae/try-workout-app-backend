@@ -60,12 +60,12 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         jwtTokenProvider.refresshTokenSetHeader(encryptedRefreshToken, response);
 
         UserDto findUser = userService
-                .findUserAndUpdateTokens(customUserDetails.getId(), accessToken, refreshToken);
+                .findUserAndUpdateTokens(customUserDetails.getId(), accessToken, encryptedRefreshToken);
 
         // redisTemplate.opsForValue().set(key, value, expiredTime, TimeUnit.MILLISECONDS);
         // 로그인 성공시 Refresh Token Redis 저장 ( key = Email / value = Refresh Token )
         long refreshTokenExpirationMillis = jwtTokenProvider.getRefreshTokenExpirationMillis();
-        redisUtils.setData(findUser.getEmail(), refreshToken, refreshTokenExpirationMillis);
+        redisUtils.setData(findUser.getEmail(), encryptedRefreshToken, refreshTokenExpirationMillis);
 
         this.getSuccessHandler().onAuthenticationSuccess(request, response, authResult);
     }

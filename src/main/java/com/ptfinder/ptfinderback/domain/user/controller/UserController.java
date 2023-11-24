@@ -30,7 +30,7 @@ public class UserController {
     public ResponseEntity<ResultResponse> getUser(
             @RequestHeader String token
     ){
-        String refreshToken = aes128Config.decryptAes(token.replace(" ", "+"));
+        String refreshToken = aes128Config.decryptAes(token);
         Claims claims = jwtTokenProvider.validateAndParseToken(refreshToken);
         String email = (String) claims.get("sub");
         // {sub = email 주소, iat=1694171245, exp=1694430445}
