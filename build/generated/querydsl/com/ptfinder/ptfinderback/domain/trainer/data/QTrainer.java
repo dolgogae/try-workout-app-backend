@@ -36,8 +36,6 @@ public class QTrainer extends EntityPathBase<Trainer> {
 
     public final ListPath<String, StringPath> qualifications = this.<String, StringPath>createList("qualifications", String.class, StringPath.class, PathInits.DIRECT2);
 
-    public final ListPath<com.ptfinder.ptfinderback.domain.review.data.Review, com.ptfinder.ptfinderback.domain.review.data.QReview> reviews = this.<com.ptfinder.ptfinderback.domain.review.data.Review, com.ptfinder.ptfinderback.domain.review.data.QReview>createList("reviews", com.ptfinder.ptfinderback.domain.review.data.Review.class, com.ptfinder.ptfinderback.domain.review.data.QReview.class, PathInits.DIRECT2);
-
     public final DateTimePath<java.time.LocalDateTime> updatedAt = createDateTime("updatedAt", java.time.LocalDateTime.class);
 
     public final com.ptfinder.ptfinderback.domain.user.data.QUserEntity user;
