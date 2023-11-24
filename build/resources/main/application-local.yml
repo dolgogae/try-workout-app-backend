@@ -25,7 +25,7 @@ spring:
 
 # Swagger springdoc-ui Configuration
 springdoc:
-  packages-to-scan: local.sihun.springsec
+  packages-to-scan: com.ptfinder.ptfinderback
   default-consumes-media-type: application/json;charset=UTF-8
   default-produces-media-type: application/json;charset=UTF-8
   swagger-ui:

@@ -39,7 +39,6 @@ public class UserEntity {
     @Enumerated(value = EnumType.STRING)
     private UserRole userRole;
 
-    @Column(name = "TRAINER_ID")
     @OneToOne(mappedBy = "user")
     private Trainer trainer;
 

@@ -2,7 +2,9 @@ package com.ptfinder.ptfinderback.domain.trainer.data;
 
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
 import com.ptfinder.ptfinderback.domain.review.data.Review;
+import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -41,7 +43,7 @@ public class Trainer {
 
     @Column(name = "QUALIFICATIONS")
     @ElementCollection
-    private List<String> qualifications;
+    private List<String> qualifications = new ArrayList<>();
 
     @OneToMany(mappedBy = "trainer")
     private List<Review> reviews = new ArrayList<>();
@@ -53,7 +55,7 @@ public class Trainer {
 //    private String programContent;
 
     @ManyToOne
-    @Column(name = "GYM_ID")
+    @JoinColumn(name = "GYM_ID")
     private Gym gym;
 
     @CreatedDate
@@ -61,4 +63,23 @@ public class Trainer {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @Builder
+    private Trainer(UserEntity user, Integer fee, Float discountRate, String introduction, Gym gym) {
+        this.user = user;
+        this.fee = fee;
+        this.discountRate = discountRate;
+        this.introduction = introduction;
+        this.gym = gym;
+    }
+
+    public static Trainer create(TrainerDto trainerDto){
+        return Trainer.builder()
+                .user(trainerDto.getUser())
+                .fee(trainerDto.getFee())
+                .discountRate(trainerDto.getDiscountRate())
+                .introduction(trainerDto.getIntroduction())
+                .gym(trainerDto.getGym())
+                .build();
+    }
 }

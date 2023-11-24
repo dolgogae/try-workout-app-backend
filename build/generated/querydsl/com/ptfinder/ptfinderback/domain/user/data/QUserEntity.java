@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.processing.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -16,6 +17,8 @@ import com.querydsl.core.types.Path;
 public class QUserEntity extends EntityPathBase<UserEntity> {
 
     private static final long serialVersionUID = 797687027L;
+
+    private static final PathInits INITS = PathInits.DIRECT2;
 
     public static final QUserEntity userEntity = new QUserEntity("userEntity");
 
@@ -33,6 +36,8 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
 
     public final StringPath refreshToken = createString("refreshToken");
 
+    public final com.ptfinder.ptfinderback.domain.trainer.data.QTrainer trainer;
+
     public final DateTimePath<java.time.LocalDateTime> updatedAt = createDateTime("updatedAt", java.time.LocalDateTime.class);
 
     public final StringPath username = createString("username");
@@ -40,15 +45,24 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
     public final EnumPath<com.ptfinder.ptfinderback.domain.user.UserRole> userRole = createEnum("userRole", com.ptfinder.ptfinderback.domain.user.UserRole.class);
 
     public QUserEntity(String variable) {
-        super(UserEntity.class, forVariable(variable));
+        this(UserEntity.class, forVariable(variable), INITS);
     }
 
     public QUserEntity(Path<? extends UserEntity> path) {
-        super(path.getType(), path.getMetadata());
+        this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
     }
 
     public QUserEntity(PathMetadata metadata) {
-        super(UserEntity.class, metadata);
+        this(metadata, PathInits.getFor(metadata, INITS));
+    }
+
+    public QUserEntity(PathMetadata metadata, PathInits inits) {
+        this(UserEntity.class, metadata, inits);
+    }
+
+    public QUserEntity(Class<? extends UserEntity> type, PathMetadata metadata, PathInits inits) {
+        super(type, metadata, inits);
+        this.trainer = inits.isInitialized("trainer") ? new com.ptfinder.ptfinderback.domain.trainer.data.QTrainer(forProperty("trainer"), inits.get("trainer")) : null;
     }
 
 }

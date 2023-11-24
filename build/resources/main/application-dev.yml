@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: validate # or create-drop, validate, none (choose appropriate)
+      ddl-auto: create # or create-drop, validate, none (choose appropriate)
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
@@ -22,7 +22,7 @@ spring:
 
 # Swagger springdoc-ui Configuration
 springdoc:
-  packages-to-scan: local.sihun.springsec
+  packages-to-scan: com.ptfinder.ptfinderback
   default-consumes-media-type: application/json;charset=UTF-8
   default-produces-media-type: application/json;charset=UTF-8
   swagger-ui:
