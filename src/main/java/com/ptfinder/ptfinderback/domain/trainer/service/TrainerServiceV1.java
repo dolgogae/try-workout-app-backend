@@ -34,8 +34,7 @@ public class TrainerServiceV1 implements TrainerService{
 
         TrainerDto result = mapper.map(savedTrainer, TrainerDto.class);
         result.setUserId(savedTrainer.getUser().getId());
-//        result.setGymId(savedTrainer.getGym().getId());
-        log.info("create trainer = {}", result.toString());
+        // TODO: GYM 쪽 로직 생성한 뒤에 정보 넣어줘야함 현재는 null 값 들어가는 중
 
         return result;
     }
