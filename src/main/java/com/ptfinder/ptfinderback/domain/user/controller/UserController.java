@@ -1,19 +1,18 @@
 package com.ptfinder.ptfinderback.domain.user.controller;
 
-import com.ptfinder.ptfinderback.security.jwt.JwtTokenProvider;
-import io.jsonwebtoken.Claims;
-import com.ptfinder.ptfinderback.domain.user.UserMappingProvider;
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import com.ptfinder.ptfinderback.domain.user.dto.UserResponseDto;
 import com.ptfinder.ptfinderback.domain.user.service.UserService;
 import com.ptfinder.ptfinderback.global.config.AES128Config;
 import com.ptfinder.ptfinderback.global.result.ResultCode;
 import com.ptfinder.ptfinderback.global.result.ResultResponse;
+import com.ptfinder.ptfinderback.security.jwt.JwtTokenProvider;
+import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -24,8 +23,8 @@ public class UserController {
 
     private final UserService userService;
     private final JwtTokenProvider jwtTokenProvider;
-    private final UserMappingProvider userMappingProvider;
     private final AES128Config aes128Config;
+    private final ModelMapper mapper;
 
     @GetMapping("/get")
     public ResponseEntity<ResultResponse> getUser(
@@ -34,13 +33,11 @@ public class UserController {
         String refreshToken = aes128Config.decryptAes(token.replace(" ", "+"));
         Claims claims = jwtTokenProvider.validateAndParseToken(refreshToken);
         String email = (String) claims.get("sub");
-
-        log.info(claims.toString());
         // {sub = email 주소, iat=1694171245, exp=1694430445}
-        log.info("user email {}", email);
+        log.info("userDto email {}", email);
 
-        UserDto user = userService.getUser(email);
-        UserResponseDto responseDto = userMappingProvider.userDtoToResponseDto(user);
+        UserDto userDto = userService.getUser(email);
+        UserResponseDto responseDto = mapper.map(userDto, UserResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.GET_MY_INFO_SUCCESS, responseDto);
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
@@ -52,8 +49,8 @@ public class UserController {
             @RequestParam String email
     ){
 
-        UserDto user = userService.getUserByAccountType(accountType, email);
-        UserResponseDto responseDto = userMappingProvider.userDtoToResponseDto(user);
+        UserDto userDto = userService.getUserByAccountType(accountType, email);
+        UserResponseDto responseDto = mapper.map(userDto, UserResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.FIND_USER_SUCCESS, responseDto);
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));

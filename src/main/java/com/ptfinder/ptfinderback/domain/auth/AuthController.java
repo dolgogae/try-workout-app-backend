@@ -1,6 +1,5 @@
 package com.ptfinder.ptfinderback.domain.auth;
 
-import com.ptfinder.ptfinderback.domain.user.UserMappingProvider;
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import com.ptfinder.ptfinderback.domain.user.dto.UserRequestDto;
 import com.ptfinder.ptfinderback.domain.user.dto.UserResponseDto;
@@ -14,6 +13,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -26,8 +26,8 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     private final UserService userService;
-    private final UserMappingProvider userMappingProvider;
     private final PasswordEncoder passwordEncoder;
+    private final ModelMapper mapper;
 
     @Operation(summary = "회원가입(sign-in)", description = "회원가입을 위한 API")
     @ApiResponses(value = {
@@ -36,17 +36,17 @@ public class AuthController {
     })
     @PostMapping("/sign-up")
     public ResponseEntity<ResultResponse> signIn(
-            @RequestBody UserRequestDto request
+            @RequestBody UserRequestDto userRequestDto
     ){
-        log.info(request.toString());
+        log.info(userRequestDto.toString());
 
-        request.setPassword(passwordEncoder.encode(request.getPassword()));
-        UserDto userDto = userMappingProvider.requestDtoToDto(request);
+        userRequestDto.setPassword(passwordEncoder.encode(userRequestDto.getPassword()));
+        UserDto userDto = mapper.map(userRequestDto, UserDto.class);
         UserDto user = userService.createUser(userDto);
 
         log.info("create user = {}", user.toString());
 
-        UserResponseDto responseDto = userMappingProvider.userDtoToResponseDto(user);
+        UserResponseDto responseDto = mapper.map(user, UserResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.REGISTER_SUCCESS, responseDto);
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));

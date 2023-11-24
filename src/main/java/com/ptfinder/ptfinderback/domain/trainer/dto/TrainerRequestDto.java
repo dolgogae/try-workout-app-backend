@@ -1,18 +1,14 @@
 package com.ptfinder.ptfinderback.domain.trainer.dto;
 
-import lombok.*;
+import javax.validation.constraints.NotBlank;
 
-@Data
-@Builder
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
-public class TrainerDto {
-
-    private Long id;
+public class TrainerRequestDto {
+    @NotBlank
     private Long userId;
+    @NotBlank
     private Integer fee;
-    private Float discountRate;
+    @NotBlank
     private String introduction;
+    @NotBlank
     private Long gymId;
 }

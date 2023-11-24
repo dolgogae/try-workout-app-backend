@@ -1,8 +1,6 @@
 package com.ptfinder.ptfinderback.domain.user.service;
 
 import com.ptfinder.ptfinderback.domain.user.AccountType;
-import com.ptfinder.ptfinderback.domain.user.UserMappingProvider;
-import com.ptfinder.ptfinderback.domain.user.UserRole;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import com.ptfinder.ptfinderback.domain.user.repository.UserJpaRepository;
@@ -10,6 +8,7 @@ import com.ptfinder.ptfinderback.global.error.ErrorCode;
 import com.ptfinder.ptfinderback.global.error.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -20,14 +19,14 @@ import java.util.Optional;
 public class UserServiceImplV1 implements UserService{
 
     private final UserJpaRepository userJpaRepository;
-    private final UserMappingProvider userMappingProvider;
+    private final ModelMapper mapper;
 
     @Override
     public UserDto createUser(UserDto userDto) {
         UserEntity userEntity = UserEntity.create(userDto);
         UserEntity savedUser = userJpaRepository.save(userEntity);
 
-        UserDto result = userMappingProvider.userEntityToUserDto(savedUser);
+        UserDto result = mapper.map(savedUser, UserDto.class);
         log.info("create User = {}", result.toString());
 
         return result;
@@ -44,7 +43,7 @@ public class UserServiceImplV1 implements UserService{
         UserEntity userEntity = userJpaRepository.findByEmail(email).orElseThrow(() ->
                 new BusinessException(ErrorCode.USER_NOT_EXIST));
 
-        UserDto result = userMappingProvider.userEntityToUserDto(userEntity);
+        UserDto result = mapper.map(userEntity, UserDto.class);
         log.info("get User = {}", result);
 
         return result;
@@ -63,7 +62,7 @@ public class UserServiceImplV1 implements UserService{
 
         UserEntity savedUser = userJpaRepository.save(user);
 
-        UserDto userDto = userMappingProvider.userEntityToUserDto(savedUser);
+        UserDto userDto = mapper.map(savedUser, UserDto.class);
 
         return userDto;
     }
@@ -81,7 +80,7 @@ public class UserServiceImplV1 implements UserService{
             findUser = optionalUser.get();
         }
 
-        UserDto userDto = userMappingProvider.userEntityToUserDto(findUser);
+        UserDto userDto = mapper.map(findUser, UserDto.class);
 
         return userDto;
     }

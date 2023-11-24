@@ -1,6 +1,5 @@
 package com.ptfinder.ptfinderback.domain.user.dto;
 
-import com.ptfinder.ptfinderback.domain.user.UserRole;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
@@ -35,6 +34,6 @@ public class UserRequestDto {
     private String userRole;
 
     @NotBlank
-    @Schema(description = "계정 종류", example = "GOOGLE, NORMAL")
+    @Schema(description = "계정 종류", example = "GOOGLE, TRAINER")
     private String accountType;
 }
