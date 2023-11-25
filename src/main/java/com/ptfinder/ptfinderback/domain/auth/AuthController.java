@@ -1,7 +1,7 @@
 package com.ptfinder.ptfinderback.domain.auth;
 
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
-import com.ptfinder.ptfinderback.domain.user.dto.UserRequestDto;
+import com.ptfinder.ptfinderback.domain.user.dto.UserCreateDto;
 import com.ptfinder.ptfinderback.domain.user.dto.UserResponseDto;
 import com.ptfinder.ptfinderback.domain.user.service.UserService;
 import com.ptfinder.ptfinderback.global.result.ResultCode;
@@ -32,17 +32,16 @@ public class AuthController {
     @Operation(summary = "회원가입(sign-in)", description = "회원가입을 위한 API")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "회원가입 성공",
-                    content = @Content(schema = @Schema(implementation = UserRequestDto.class)))
+                    content = @Content(schema = @Schema(implementation = UserCreateDto.class)))
     })
     @PostMapping("/sign-up")
     public ResponseEntity<ResultResponse> signUp(
-            @RequestBody UserRequestDto userRequestDto
+            @RequestBody UserCreateDto userCreateDto
     ){
-        log.info(userRequestDto.toString());
+        log.info(userCreateDto.toString());
 
-        userRequestDto.setPassword(passwordEncoder.encode(userRequestDto.getPassword()));
-        UserDto userDto = mapper.map(userRequestDto, UserDto.class);
-        UserDto user = userService.createUser(userDto);
+        userCreateDto.setPassword(passwordEncoder.encode(userCreateDto.getPassword()));
+        UserDto user = userService.createUser(userCreateDto);
 
         UserResponseDto responseDto = mapper.map(user, UserResponseDto.class);
 

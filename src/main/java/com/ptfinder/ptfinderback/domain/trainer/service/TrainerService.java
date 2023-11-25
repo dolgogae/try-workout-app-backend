@@ -1,9 +1,10 @@
 package com.ptfinder.ptfinderback.domain.trainer.service;
 
+import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 
 public interface TrainerService {
 
-    TrainerDto createTrainer(TrainerDto trainerDto);
+    TrainerDto createTrainer(TrainerCreateDto trainerCreateDto);
     TrainerDto updateTrainerDiscountRate(Long trainerId, Float discountRate);
 }

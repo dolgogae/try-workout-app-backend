@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class TrainerRequestDto {
+public class TrainerCreateDto {
     @NotBlank
     private Long userId;
     @NotBlank

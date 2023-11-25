@@ -1,6 +1,7 @@
 package com.ptfinder.ptfinderback.domain.trainer.service;
 
 import com.ptfinder.ptfinderback.domain.trainer.data.Trainer;
+import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.trainer.repository.TrainerJpaRepository;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
@@ -24,7 +25,8 @@ public class TrainerServiceV1 implements TrainerService{
 
     @Override
     @Transactional
-    public TrainerDto createTrainer(TrainerDto trainerDto) {
+    public TrainerDto createTrainer(TrainerCreateDto trainerCreateDto) {
+        TrainerDto trainerDto = mapper.map(trainerCreateDto, TrainerDto.class);
         Trainer trainer = Trainer.create(trainerDto);
         UserEntity userEntity = userJpaRepository.findById(trainerDto.getUserId()).orElseThrow(() ->
                 new BusinessException(ErrorCode.USER_NOT_EXIST));

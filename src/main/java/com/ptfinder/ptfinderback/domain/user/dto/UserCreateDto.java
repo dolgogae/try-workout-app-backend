@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @Builder
 @Schema(description = "사용자 요청 DTO")
-public class UserRequestDto {
+public class UserCreateDto {
 
     @NotBlank
     @Size(min = 2, message = "Username length must be greater than 2.")

@@ -1,5 +1,6 @@
 package com.ptfinder.ptfinderback.domain.trainer.service;
 
+import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.trainer.repository.TrainerJpaRepository;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
@@ -31,10 +32,9 @@ class TrainerServiceV1Test {
     @Test
     void createTrainerTest(){
         // given
-        TrainerDto trainerDto = TrainerDto.builder()
+        TrainerCreateDto trainerDto = TrainerCreateDto.builder()
                 .userId(1L)
                 .fee(10000)
-                .discountRate(0.2f)
                 .introduction("안녕하세요")
                 .build();
 

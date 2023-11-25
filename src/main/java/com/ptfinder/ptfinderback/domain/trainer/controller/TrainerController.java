@@ -1,12 +1,11 @@
 package com.ptfinder.ptfinderback.domain.trainer.controller;
 
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
-import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerRequestDto;
+import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerResponseDto;
 import com.ptfinder.ptfinderback.domain.trainer.service.TrainerService;
 import com.ptfinder.ptfinderback.global.result.ResultCode;
 import com.ptfinder.ptfinderback.global.result.ResultResponse;
-import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -25,11 +24,10 @@ public class TrainerController {
 
     @PostMapping("/create")
     public ResponseEntity<ResultResponse> createTrainer(
-            @RequestBody TrainerRequestDto trainerRequestDto
+            @RequestBody TrainerCreateDto trainerCreateDto
     ){
-        log.info(String.valueOf(trainerRequestDto.getUserId()));
-        TrainerDto trainerDto = mapper.map(trainerRequestDto, TrainerDto.class);
-        TrainerDto trainer = trainerService.createTrainer(trainerDto);
+        log.info(String.valueOf(trainerCreateDto.getUserId()));
+        TrainerDto trainer = trainerService.createTrainer(trainerCreateDto);
         TrainerResponseDto trainerResponseDto = mapper.map(trainer, TrainerResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.TRAINER_CREATE_SUCCESS, trainerResponseDto);

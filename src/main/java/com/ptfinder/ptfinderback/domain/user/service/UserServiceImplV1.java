@@ -2,6 +2,7 @@ package com.ptfinder.ptfinderback.domain.user.service;
 
 import com.ptfinder.ptfinderback.domain.user.AccountType;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
+import com.ptfinder.ptfinderback.domain.user.dto.UserCreateDto;
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 import com.ptfinder.ptfinderback.domain.user.repository.UserJpaRepository;
 import com.ptfinder.ptfinderback.global.error.ErrorCode;
@@ -22,7 +23,8 @@ public class UserServiceImplV1 implements UserService{
     private final ModelMapper mapper;
 
     @Override
-    public UserDto createUser(UserDto userDto) {
+    public UserDto createUser(UserCreateDto userCreateDto) {
+        UserDto userDto = mapper.map(userCreateDto, UserDto.class);
         UserEntity userEntity = UserEntity.create(userDto);
         UserEntity savedUser = userJpaRepository.save(userEntity);
 
