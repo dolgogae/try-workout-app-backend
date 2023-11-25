@@ -13,9 +13,8 @@ public class TrainerCreateDto {
     @NotBlank
     private Long userId;
     @NotBlank
-    private Integer fee;
-    @NotBlank
     private String introduction;
     @NotBlank
     private Long gymId;
+
 }

@@ -11,8 +11,6 @@ public class TrainerDto {
 
     private Long id;
     private Long userId;
-    private Integer fee;
-    private Float discountRate;
     private String introduction;
     private Long gymId;
 }

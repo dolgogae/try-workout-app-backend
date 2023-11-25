@@ -34,7 +34,10 @@ public enum ErrorCode {
 
     // Encrypt
     ENCRYPTION_FAILED(400, "E001", "Encryption failed"),
-    DECRYPTION_FAILED(400, "E002", "Decryption failed");
+    DECRYPTION_FAILED(400, "E002", "Decryption failed"),
+
+    // GYM
+    GYM_NOT_FOUND(400, "G001", "Gym is not exist");
 
     private int status;
     private final String code;

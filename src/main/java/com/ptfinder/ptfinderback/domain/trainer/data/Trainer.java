@@ -1,6 +1,8 @@
 package com.ptfinder.ptfinderback.domain.trainer.data;
 
+import com.ptfinder.ptfinderback.domain.fee.data.Fee;
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
+import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
 import lombok.Builder;
@@ -31,8 +33,12 @@ public class Trainer {
     @JoinColumn(name = "USER_ID", unique = true)
     private UserEntity user;
 
-    @Column(name = "FEE")
-    private Integer fee;
+    @OneToMany(mappedBy = "trainer",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Fee> fees = new ArrayList<>();
 
     @Column(name = "INTRODUCTION", length = 10000)
     private String introduction;
@@ -52,22 +58,18 @@ public class Trainer {
     private LocalDateTime updatedAt;
 
     @Builder
-    private Trainer(UserEntity user, Integer fee, String introduction, Gym gym) {
+    private Trainer(UserEntity user, String introduction, Gym gym) {
         this.user = user;
-        this.fee = fee;
         this.introduction = introduction;
         this.gym = gym;
     }
 
-    public static Trainer create(TrainerDto trainerDto){
+    public static Trainer create(TrainerCreateDto trainerDto, UserEntity user, Gym gym){
         return Trainer.builder()
-                .fee(trainerDto.getFee())
                 .introduction(trainerDto.getIntroduction())
+                .user(user)
+                .gym(gym)
                 .build();
     }
 
-    public Trainer updateUser(UserEntity user){
-        this.user = user;
-        return this;
-    }
 }

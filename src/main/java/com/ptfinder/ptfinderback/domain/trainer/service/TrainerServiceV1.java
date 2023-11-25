@@ -1,5 +1,7 @@
 package com.ptfinder.ptfinderback.domain.trainer.service;
 
+import com.ptfinder.ptfinderback.domain.gym.data.Gym;
+import com.ptfinder.ptfinderback.domain.gym.repository.GymJpaRepository;
 import com.ptfinder.ptfinderback.domain.trainer.data.Trainer;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
@@ -21,23 +23,29 @@ public class TrainerServiceV1 implements TrainerService{
 
     private final TrainerJpaRepository trainerJpaRepository;
     private final UserJpaRepository userJpaRepository;
+    private final GymJpaRepository gymJpaRepository;
     private final ModelMapper mapper;
 
     @Override
     @Transactional
     public TrainerDto createTrainer(TrainerCreateDto trainerCreateDto) {
-        TrainerDto trainerDto = mapper.map(trainerCreateDto, TrainerDto.class);
-        Trainer trainer = Trainer.create(trainerDto);
-        UserEntity userEntity = userJpaRepository.findById(trainerDto.getUserId()).orElseThrow(() ->
+        Gym gym = gymJpaRepository.findById(trainerCreateDto.getGymId()).orElseThrow(() ->
+                new BusinessException(ErrorCode.GYM_NOT_FOUND));
+        UserEntity userEntity = userJpaRepository.findById(trainerCreateDto.getUserId()).orElseThrow(() ->
                 new BusinessException(ErrorCode.USER_NOT_EXIST));
-        trainer.updateUser(userEntity);
 
+        Trainer trainer = Trainer.create(trainerCreateDto, userEntity, gym);
         Trainer savedTrainer = trainerJpaRepository.save(trainer);
 
+        TrainerDto result = getTrainerDto(savedTrainer);
+
+        return result;
+    }
+
+    private TrainerDto getTrainerDto(Trainer savedTrainer) {
         TrainerDto result = mapper.map(savedTrainer, TrainerDto.class);
         result.setUserId(savedTrainer.getUser().getId());
-        // TODO: GYM 쪽 로직 생성한 뒤에 정보 넣어줘야함 현재는 null 값 들어가는 중
-
+        result.setGymId(savedTrainer.getGym().getId());
         return result;
     }
 }

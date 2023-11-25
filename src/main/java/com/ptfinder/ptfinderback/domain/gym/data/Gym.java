@@ -60,7 +60,11 @@ public class Gym {
     @Column(name = "HOLIDAY")
     private String holiday;
 
-    @OneToMany(mappedBy = "gym", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "gym",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
     private List<Trainer> trainers = new ArrayList<>();
 
     @CreatedDate

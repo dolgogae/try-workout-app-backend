@@ -34,7 +34,6 @@ class TrainerServiceV1Test {
         // given
         TrainerCreateDto trainerDto = TrainerCreateDto.builder()
                 .userId(1L)
-                .fee(10000)
                 .introduction("안녕하세요")
                 .build();
 
@@ -43,7 +42,5 @@ class TrainerServiceV1Test {
 
         // then
         assertThat(result.getUserId()).isEqualTo(1L);
-        assertThat(result.getFee()).isEqualTo(10000);
-        assertThat(result.getDiscountRate()).isEqualTo(0.2f);
     }
 }
