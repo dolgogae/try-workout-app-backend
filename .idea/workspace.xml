@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/data/Gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/data/Gym.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/member/data/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/member/data/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/error/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/error/ErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1Test.java" afterDir="false" />
-    </list>
+    <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,15 +68,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
