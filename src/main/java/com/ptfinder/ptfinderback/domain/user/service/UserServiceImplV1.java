@@ -68,22 +68,4 @@ public class UserServiceImplV1 implements UserService{
 
         return userDto;
     }
-
-    @Override
-    public UserDto getUserByAccountType(String accountType, String email) {
-
-        AccountType type = AccountType.valueOf(accountType);
-
-        UserEntity findUser;
-        Optional<UserEntity> optionalUser = userJpaRepository.findByEmailAndAccountType(email, type);
-        if(optionalUser.isEmpty()){
-            return null;
-        } else {
-            findUser = optionalUser.get();
-        }
-
-        UserDto userDto = mapper.map(findUser, UserDto.class);
-
-        return userDto;
-    }
 }

@@ -34,9 +34,6 @@ public class Trainer {
     @Column(name = "FEE")
     private Integer fee;
 
-    @Column(name = "DISCOUNT_RATE")
-    private Float discountRate;
-
     @Column(name = "INTRODUCTION", length = 10000)
     private String introduction;
 
@@ -55,10 +52,9 @@ public class Trainer {
     private LocalDateTime updatedAt;
 
     @Builder
-    private Trainer(UserEntity user, Integer fee, Float discountRate, String introduction, Gym gym) {
+    private Trainer(UserEntity user, Integer fee, String introduction, Gym gym) {
         this.user = user;
         this.fee = fee;
-        this.discountRate = discountRate;
         this.introduction = introduction;
         this.gym = gym;
     }
@@ -66,18 +62,12 @@ public class Trainer {
     public static Trainer create(TrainerDto trainerDto){
         return Trainer.builder()
                 .fee(trainerDto.getFee())
-                .discountRate(trainerDto.getDiscountRate())
                 .introduction(trainerDto.getIntroduction())
                 .build();
     }
 
     public Trainer updateUser(UserEntity user){
         this.user = user;
-        return this;
-    }
-
-    public Trainer updateDiscountRate(Float discountRate){
-        this.discountRate = discountRate;
         return this;
     }
 }

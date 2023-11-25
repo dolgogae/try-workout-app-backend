@@ -10,5 +10,4 @@ public interface UserService {
     UserDto getUser(String email);
     UserDto deleteUser(UserDto userDto);
     UserDto findUserAndUpdateTokens(Long id, String accessToken, String refreshToken);
-    UserDto getUserByAccountType(String accountType, String email);
 }

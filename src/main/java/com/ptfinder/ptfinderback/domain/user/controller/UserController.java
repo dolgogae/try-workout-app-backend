@@ -26,7 +26,7 @@ public class UserController {
     private final AES128Config aes128Config;
     private final ModelMapper mapper;
 
-    @GetMapping("/get")
+    @GetMapping
     public ResponseEntity<ResultResponse> getUser(
             @RequestHeader String token
     ){
@@ -40,19 +40,6 @@ public class UserController {
         UserResponseDto responseDto = mapper.map(userDto, UserResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.GET_MY_INFO_SUCCESS, responseDto);
-        return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
-    }
-
-    @GetMapping("/get/account")
-    public ResponseEntity<ResultResponse> getUserByAccountType(
-            @RequestParam String accountType,
-            @RequestParam String email
-    ){
-
-        UserDto userDto = userService.getUserByAccountType(accountType, email);
-        UserResponseDto responseDto = mapper.map(userDto, UserResponseDto.class);
-
-        ResultResponse result = ResultResponse.of(ResultCode.FIND_USER_SUCCESS, responseDto);
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
     }
 }

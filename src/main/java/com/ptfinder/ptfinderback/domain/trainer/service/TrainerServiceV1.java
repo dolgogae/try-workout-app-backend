@@ -40,16 +40,4 @@ public class TrainerServiceV1 implements TrainerService{
 
         return result;
     }
-
-    @Override
-    public TrainerDto updateTrainerDiscountRate(Long trainerId, Float discountRate) {
-        Trainer trainer = trainerJpaRepository.findById(trainerId).orElseThrow(() ->
-                new BusinessException(ErrorCode.USER_NOT_EXIST));
-        trainer.updateDiscountRate(discountRate);
-
-        TrainerDto result = mapper.map(trainer, TrainerDto.class);
-        log.info("updated trainer = {}", result.toString());
-
-        return result;
-    }
 }

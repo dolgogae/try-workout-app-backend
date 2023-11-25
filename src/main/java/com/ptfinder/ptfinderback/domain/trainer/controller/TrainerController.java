@@ -22,7 +22,7 @@ public class TrainerController {
     private final TrainerService trainerService;
     private final ModelMapper mapper;
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<ResultResponse> createTrainer(
             @RequestBody TrainerCreateDto trainerCreateDto
     ){
@@ -34,16 +34,4 @@ public class TrainerController {
         return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{trainerId}/discount")
-    public ResponseEntity<ResultResponse> updateDiscountRate(
-            @RequestHeader String token,
-            @PathVariable Long trainerId,
-            @RequestBody Float discountRate
-    ){
-        TrainerDto trainerDto = trainerService.updateTrainerDiscountRate(trainerId, discountRate);
-        TrainerResponseDto trainerResponseDto = mapper.map(trainerDto, TrainerResponseDto.class);
-
-        ResultResponse result = ResultResponse.of(ResultCode.TRAINER_CREATE_SUCCESS, trainerResponseDto);
-        return new ResponseEntity<>(result, HttpStatus.CREATED);
-    }
 }
