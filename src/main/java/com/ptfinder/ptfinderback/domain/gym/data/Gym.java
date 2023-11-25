@@ -49,7 +49,7 @@ public class Gym {
     private Boolean lockerYn;
 
     @Column(name = "lockerFee")
-    private Boolean lockerFee;
+    private Integer lockerFee;
 
     @Column(name = "BUSINESS_HOURS_WEEK")
     private String businessHoursWeek;
