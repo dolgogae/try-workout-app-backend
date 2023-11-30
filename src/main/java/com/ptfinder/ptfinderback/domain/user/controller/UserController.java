@@ -26,7 +26,7 @@ public class UserController {
     private final AES128Config aes128Config;
     private final ModelMapper mapper;
 
-    @GetMapping
+    @GetMapping("")
     public ResponseEntity<ResultResponse> getUser(
             @RequestHeader String token
     ){

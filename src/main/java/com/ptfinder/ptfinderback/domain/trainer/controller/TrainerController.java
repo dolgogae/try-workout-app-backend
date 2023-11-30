@@ -22,7 +22,7 @@ public class TrainerController {
     private final TrainerService trainerService;
     private final ModelMapper mapper;
 
-    @PostMapping
+    @PostMapping("")
     public ResponseEntity<ResultResponse> createTrainer(
             @RequestBody TrainerCreateDto trainerCreateDto
     ){

@@ -26,14 +26,11 @@ public class GymServiceV1 implements GymService{
     public GymDto getGym(GymCreateDto gymCreateDto) {
         Optional<Gym> findGyms = gymDslRepository.findOneByGymNameAndMapXAndMapY(gymCreateDto);
 
-        GymDto result;
         if(findGyms.isEmpty()){
-            result = createGym(gymCreateDto);
+            return createGym(gymCreateDto);
         } else {
-            result = mapper.map(findGyms.get(), GymDto.class);
+            return mapper.map(findGyms.get(), GymDto.class);
         }
-
-        return result;
     }
 
     @Override
