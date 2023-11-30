@@ -14,7 +14,5 @@ public class TrainerCreateDto {
     private Long userId;
     @NotBlank
     private String introduction;
-    @NotBlank
     private Long gymId;
-
 }

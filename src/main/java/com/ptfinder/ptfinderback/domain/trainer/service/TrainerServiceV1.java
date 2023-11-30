@@ -29,8 +29,16 @@ public class TrainerServiceV1 implements TrainerService{
     @Override
     @Transactional
     public TrainerDto createTrainer(TrainerCreateDto trainerCreateDto) {
-        Gym gym = gymJpaRepository.findById(trainerCreateDto.getGymId()).orElseThrow(() ->
-                new BusinessException(ErrorCode.GYM_NOT_FOUND));
+        /**
+         * Gym is not essential parameter in register.
+         * so, if trainer does not necessary enter the gym info when they are registered
+         * Trainer domain's gym put null
+         */
+        Gym gym = null;
+        if(trainerCreateDto.getGymId() != null) {
+            gym = gymJpaRepository.findById(trainerCreateDto.getGymId()).orElseThrow(() ->
+                    new BusinessException(ErrorCode.GYM_NOT_FOUND));
+        }
         UserEntity userEntity = userJpaRepository.findById(trainerCreateDto.getUserId()).orElseThrow(() ->
                 new BusinessException(ErrorCode.USER_NOT_EXIST));
 

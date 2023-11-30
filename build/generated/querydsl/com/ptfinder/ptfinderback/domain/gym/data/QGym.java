@@ -20,6 +20,8 @@ public class QGym extends EntityPathBase<Gym> {
 
     public static final QGym gym = new QGym("gym");
 
+    public final StringPath address = createString("address");
+
     public final StringPath businessHoursWeek = createString("businessHoursWeek");
 
     public final StringPath businessHoursWeekend = createString("businessHoursWeekend");
@@ -34,15 +36,19 @@ public class QGym extends EntityPathBase<Gym> {
 
     public final StringPath information = createString("information");
 
-    public final StringPath location = createString("location");
-
-    public final BooleanPath lockerFee = createBoolean("lockerFee");
+    public final NumberPath<Integer> lockerFee = createNumber("lockerFee", Integer.class);
 
     public final BooleanPath lockerYn = createBoolean("lockerYn");
+
+    public final NumberPath<Float> mapX = createNumber("mapX", Float.class);
+
+    public final NumberPath<Float> mapY = createNumber("mapY", Float.class);
 
     public final NumberPath<Integer> parkingFee = createNumber("parkingFee", Integer.class);
 
     public final BooleanPath parkingYn = createBoolean("parkingYn");
+
+    public final StringPath roadAddress = createString("roadAddress");
 
     public final ListPath<com.ptfinder.ptfinderback.domain.trainer.data.Trainer, com.ptfinder.ptfinderback.domain.trainer.data.QTrainer> trainers = this.<com.ptfinder.ptfinderback.domain.trainer.data.Trainer, com.ptfinder.ptfinderback.domain.trainer.data.QTrainer>createList("trainers", com.ptfinder.ptfinderback.domain.trainer.data.Trainer.class, com.ptfinder.ptfinderback.domain.trainer.data.QTrainer.class, PathInits.DIRECT2);
 

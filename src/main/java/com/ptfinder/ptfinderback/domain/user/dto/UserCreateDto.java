@@ -34,6 +34,6 @@ public class UserCreateDto {
     private String userRole;
 
     @NotBlank
-    @Schema(description = "계정 종류", example = "GOOGLE, TRAINER")
+    @Schema(description = "계정 종류", example = "GOOGLE, NORMAL")
     private String accountType;
 }

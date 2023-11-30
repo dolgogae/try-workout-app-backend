@@ -4,7 +4,88 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="" />
+    <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/pt-finder-back.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/dto/DiscountRateUpdateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/dto/GymCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/dto/GymDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/dto/GymLocationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/repository/GymDslRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/service/GymService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/config/QuerydslConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/spring-sec.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/SpringSecApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/auth/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/auth/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/gym/controller/GymController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/gym/controller/GymController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/gym/data/Gym.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/gym/data/Gym.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/gym/data/QGym.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/gym/data/QGym.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/member/data/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/member/data/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/controller/TrainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/controller/TrainerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer$TrainerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer$TrainerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerDto$TrainerDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerDto$TrainerDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerRequestDto$TrainerRequestDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerRequestDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserRequestDto$UserRequestDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserRequestDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/global/error/ErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/global/error/ErrorCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/SpringSecApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/gym/data/QGym.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/gym/data/QGym.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.ptfinder.ptfinderback.global.config.AES128ConfigTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.ptfinder.ptfinderback.global.config.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.ptfinder.ptfinderback.global.config.AES128ConfigTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/AES128ConfigTest.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TrainerServiceV1Test.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/SpringSecApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/PtFinderBackApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/data/Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/data/Fee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/dto/FeeCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/dto/FeeCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/controller/GymController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/data/Gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/gym/data/Gym.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/SpringSecApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/PtFinderBackApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1Test.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +110,24 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="spring-sec" type="f1a62948:ProjectNode" />
+                <item name="pt-finder-back" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="spring-sec" type="f1a62948:ProjectNode" />
+                <item name="pt-finder-back" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pt-finder-back" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="pt-finder-back" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -68,15 +161,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/sihun/dev/project/pt-finder/pt-finder-back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editing.templates",
+    "spring.configuration.checksum": "7a0585ad88de2b8ffcb8270d8a2a167e",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -99,8 +204,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringSecApplication">
-    <configuration name="AES128ConfigTest.aes128Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UserServiceImplV1Test">
+    <configuration name="UserServiceImplV1Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -113,7 +218,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ptfinder.ptfinderback.global.config.AES128ConfigTest.aes128Test&quot;" />
+            <option value="&quot;com.ptfinder.ptfinderback.domain.user.service.UserServiceImplV1Test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -124,7 +229,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="TrainerServiceV1Test.createTrainerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceImplV1Test.createUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +242,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ptfinder.ptfinderback.domain.trainer.service.TrainerServiceV1Test.createTrainerTest&quot;" />
+            <option value="&quot;com.ptfinder.ptfinderback.domain.user.service.UserServiceImplV1Test.createUserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -148,7 +253,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceImplV1Test.getUserByAccountType" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceImplV1Test.getUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -161,7 +266,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ptfinder.ptfinderback.domain.user.service.UserServiceImplV1Test.getUserByAccountType&quot;" />
+            <option value="&quot;com.ptfinder.ptfinderback.domain.user.service.UserServiceImplV1Test.getUserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -170,6 +275,28 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="pt-finder-back [compileQuerydslJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileQuerydslJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="pt-finder-back [compileQuerydsl]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -194,6 +321,19 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="spring-sec" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="spring-sec" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PtFinderBackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="pt-finder-back.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ptfinder.ptfinderback.PtFinderBackApplication" />
@@ -201,34 +341,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringSecApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="spring-sec.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ptfinder.ptfinderback.SpringSecApplication" />
+    <configuration name="PtFinderBackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pt-finder-back.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ptfinder.ptfinderback.PtFinderBackApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PtFinderBackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pt-finder-back.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ptfinder.ptfinderback.PtFinderBackApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.AES128ConfigTest.aes128Test" />
+      <item itemvalue="Gradle.UserServiceImplV1Test" />
+      <item itemvalue="Gradle.UserServiceImplV1Test.createUserTest" />
+      <item itemvalue="Gradle.UserServiceImplV1Test.getUserTest" />
+      <item itemvalue="Gradle.pt-finder-back [compileQuerydslJava]" />
       <item itemvalue="Gradle.pt-finder-back [compileQuerydsl]" />
-      <item itemvalue="Gradle.TrainerServiceV1Test.createTrainerTest" />
-      <item itemvalue="Gradle.UserServiceImplV1Test.getUserByAccountType" />
-      <item itemvalue="Spring Boot.SpringSecApplication" />
       <item itemvalue="Spring Boot.PtFinderBackApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AES128ConfigTest.aes128Test" />
+        <item itemvalue="Gradle.UserServiceImplV1Test" />
+        <item itemvalue="Gradle.UserServiceImplV1Test.getUserTest" />
+        <item itemvalue="Gradle.UserServiceImplV1Test.createUserTest" />
         <item itemvalue="Gradle.pt-finder-back [compileQuerydsl]" />
-        <item itemvalue="Gradle.TrainerServiceV1Test.createTrainerTest" />
-        <item itemvalue="Gradle.UserServiceImplV1Test.getUserByAccountType" />
+        <item itemvalue="Gradle.pt-finder-back [compileQuerydslJava]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="87142372-0f66-46e7-af55-9fbc40a428cc" name="Changes" comment="" />
+      <changelist id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="" />
       <created>1697814207639</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -237,6 +385,8 @@
       <workItem from="1698062315021" duration="7077000" />
       <workItem from="1699080049535" duration="317000" />
       <workItem from="1699080379802" duration="44026000" />
+      <workItem from="1700979041200" duration="923000" />
+      <workItem from="1701003581276" duration="9561000" />
     </task>
     <servers />
   </component>

@@ -13,10 +13,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableCaching
 @EnableJpaAuditing
 @SpringBootApplication//(exclude={SecurityAutoConfiguration.class})
-public class SpringSecApplication {
+public class PtFinderBackApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringSecApplication.class, args);
+        SpringApplication.run(PtFinderBackApplication.class, args);
     }
 
     @Bean

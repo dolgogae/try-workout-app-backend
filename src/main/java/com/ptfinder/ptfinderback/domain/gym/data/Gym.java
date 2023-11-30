@@ -1,6 +1,8 @@
 package com.ptfinder.ptfinderback.domain.gym.data;
 
+import com.ptfinder.ptfinderback.domain.gym.dto.GymCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.data.Trainer;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -20,15 +22,18 @@ import java.util.List;
 public class Gym {
 
     @Id
-    @Column(name = "TRAINER_ID")
+    @Column(name = "GYM_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "GYM_NAME")
     private String gymName;
 
-    @Column(name = "LOCATION")
-    private String location;
+    @Column(name = "ADDRESS")
+    private String address;
+
+    @Column(name = "ROAD_ADDRESS")
+    private String roadAddress;
 
     @Column(name = "INFORMATION")
     private String information;
@@ -60,6 +65,12 @@ public class Gym {
     @Column(name = "HOLIDAY")
     private String holiday;
 
+    @Column(name = "MAP_X")
+    private Float mapX;
+
+    @Column(name = "MAP_Y")
+    private Float mapY;
+
     @OneToMany(mappedBy = "gym",
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
@@ -72,4 +83,23 @@ public class Gym {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @Builder
+    private Gym(String gymName, String address, String roadAddress, Float mapX, Float mapY) {
+        this.gymName = gymName;
+        this.address = address;
+        this.roadAddress = roadAddress;
+        this.mapX = mapX;
+        this.mapY = mapY;
+    }
+
+    public static Gym create(GymCreateDto gymCreateDto){
+        return Gym.builder()
+                .gymName(gymCreateDto.getGymName())
+                .address(gymCreateDto.getAddress())
+                .roadAddress(gymCreateDto.getRoadAddress())
+                .mapX(gymCreateDto.getMapX())
+                .mapY(gymCreateDto.getMapY())
+                .build();
+    }
 }

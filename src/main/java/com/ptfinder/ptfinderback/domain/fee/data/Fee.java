@@ -1,6 +1,8 @@
 package com.ptfinder.ptfinderback.domain.fee.data;
 
+import com.ptfinder.ptfinderback.domain.fee.dto.FeeCreateDto;
 import com.ptfinder.ptfinderback.domain.trainer.data.Trainer;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -39,4 +41,21 @@ public class Fee {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @Builder
+    private Fee(Integer times, Integer price, Float discountRate, Trainer trainer) {
+        this.times = times;
+        this.price = price;
+        this.discountRate = discountRate;
+        this.trainer = trainer;
+    }
+
+    public static Fee create(FeeCreateDto feeCreateDto, Trainer trainer){
+        return Fee.builder()
+                .times(feeCreateDto.getTimes())
+                .price(feeCreateDto.getPrice())
+                .discountRate(feeCreateDto.getDiscountRate())
+                .trainer(trainer)
+                .build();
+    }
 }

@@ -24,9 +24,7 @@ public class QTrainer extends EntityPathBase<Trainer> {
 
     public final DateTimePath<java.time.LocalDateTime> createdAt = createDateTime("createdAt", java.time.LocalDateTime.class);
 
-    public final NumberPath<Float> discountRate = createNumber("discountRate", Float.class);
-
-    public final NumberPath<Integer> fee = createNumber("fee", Integer.class);
+    public final ListPath<com.ptfinder.ptfinderback.domain.fee.data.Fee, com.ptfinder.ptfinderback.domain.fee.data.QFee> fees = this.<com.ptfinder.ptfinderback.domain.fee.data.Fee, com.ptfinder.ptfinderback.domain.fee.data.QFee>createList("fees", com.ptfinder.ptfinderback.domain.fee.data.Fee.class, com.ptfinder.ptfinderback.domain.fee.data.QFee.class, PathInits.DIRECT2);
 
     public final com.ptfinder.ptfinderback.domain.gym.data.QGym gym;
 
