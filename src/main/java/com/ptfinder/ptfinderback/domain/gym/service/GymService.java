@@ -9,5 +9,5 @@ import java.util.List;
 public interface GymService {
 
     GymDto getGym(GymCreateDto gymCreateDto);
-    List<GymDto> getKNearestLocations(Integer k, GymLocationDto gymLocation);
+    List<GymLocationDto> getKNearestLocations(Integer k, GymLocationDto gymLocation);
 }

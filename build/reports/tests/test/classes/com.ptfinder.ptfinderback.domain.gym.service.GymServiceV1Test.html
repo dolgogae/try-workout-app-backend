@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.275s</div>
+<div class="counter">1m47.44s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,9 +79,9 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Gym 생성 서비스 테스트</td>
-<td class="success">getGymTest()</td>
-<td class="success">0.275s</td>
+<td class="success">현재 중심에서 가장 가까운 gym 찾기 테스트</td>
+<td class="success">getKNearestLocations()</td>
+<td class="success">1m47.44s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,21 +89,21 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>19:55:32.029 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-19:55:32.034 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-19:55:32.048 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-19:55:32.052 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test], using SpringBootContextLoader
-19:55:32.054 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: class path resource [com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1Test-context.xml] does not exist
-19:55:32.054 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: class path resource [com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1TestContext.groovy] does not exist
-19:55:32.054 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: no resource found for suffixes {-context.xml, Context.groovy}.
-19:55:32.055 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: GymServiceV1Test does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-19:55:32.073 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]
-19:55:32.103 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/sihun/dev/project/pt-finder/pt-finder-back/build/classes/java/main/com/ptfinder/ptfinderback/PtFinderBackApplication.class]
-19:55:32.104 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ptfinder.ptfinderback.PtFinderBackApplication for test class com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test
-19:55:32.136 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: using defaults.
-19:55:32.136 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-19:55:32.144 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3185fa6b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6d366c9b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5b58ed3c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@24faea88, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3a320ade, org.springframework.test.context.support.DirtiesContextTestExecutionListener@64beebb7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7813cb11, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@bcec031, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@21005f6c, org.springframework.test.context.event.EventPublishingTestExecutionListener@32f0fba8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@545de5a4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@29ef6856, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@ab7a938, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3faf2e7d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4648ce9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@569bf9eb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@61526469]
-19:55:32.145 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7fcbe147 testClass = GymServiceV1Test, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@235f4c10 testClass = GymServiceV1Test, locations = '{}', classes = '{class com.ptfinder.ptfinderback.PtFinderBackApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@3fc9504b, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@bcef303, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@a87f8ec, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e1ef60, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3a5ecce3, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@69e1dd28], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>21:25:37.008 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:25:37.013 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:25:37.029 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:25:37.034 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test], using SpringBootContextLoader
+21:25:37.036 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: class path resource [com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1Test-context.xml] does not exist
+21:25:37.036 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: class path resource [com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1TestContext.groovy] does not exist
+21:25:37.036 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:25:37.037 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: GymServiceV1Test does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:25:37.058 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]
+21:25:37.090 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/sihun/dev/project/pt-finder/pt-finder-back/build/classes/java/main/com/ptfinder/ptfinderback/PtFinderBackApplication.class]
+21:25:37.091 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.ptfinder.ptfinderback.PtFinderBackApplication for test class com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test
+21:25:37.128 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test]: using defaults.
+21:25:37.128 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:25:37.136 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@42b64ab8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7e985ce9, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2a39fe6a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@410ae9a3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@319988b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@d5ae57e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@68759011, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7e242b4d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@305f031, org.springframework.test.context.event.EventPublishingTestExecutionListener@592e843a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1d1f7216, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@423e4cbb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6e16b8b5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@43b4fe19, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@25ddbbbb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1536602f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4ebea12c]
+21:25:37.137 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@625e134e testClass = GymServiceV1Test, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72bd06ca testClass = GymServiceV1Test, locations = '{}', classes = '{class com.ptfinder.ptfinderback.PtFinderBackApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7e6ef134, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@648c94da, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6c0d9d86, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5dcb4f5f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@51acdf2e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@c333c60], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -113,34 +113,34 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.12)
 
-2023-11-30 19:55:32.305  INFO 68714 --- [    Test worker] c.p.p.d.gym.service.GymServiceV1Test     : Starting GymServiceV1Test using Java 17.0.8.1 on osihun-ui-noteubug.local with PID 68714 (started by sihun in /Users/sihun/dev/project/pt-finder/pt-finder-back)
-2023-11-30 19:55:32.306  INFO 68714 --- [    Test worker] c.p.p.d.gym.service.GymServiceV1Test     : The following 1 profile is active: &quot;dev&quot;
-2023-11-30 19:55:32.685  INFO 68714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-30 19:55:32.686  INFO 68714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-30 19:55:32.754  INFO 68714 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.redis.RefreshTokenRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
-2023-11-30 19:55:32.761  INFO 68714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
-2023-11-30 19:55:32.766  INFO 68714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-11-30 19:55:32.767  INFO 68714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-11-30 19:55:32.775  INFO 68714 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.fee.repository.FeeJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-30 19:55:32.776  INFO 68714 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.gym.repository.GymJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-30 19:55:32.776  INFO 68714 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.review.repository.ReviewJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-30 19:55:32.776  INFO 68714 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.trainer.repository.TrainerJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-30 19:55:32.777  INFO 68714 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.user.repository.UserJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2023-11-30 19:55:32.780  INFO 68714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 Redis repository interfaces.
-2023-11-30 19:55:33.064  INFO 68714 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-30 19:55:33.086  INFO 68714 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2023-11-30 19:55:33.158  INFO 68714 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-11-30 19:55:33.195  INFO 68714 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-30 19:55:33.286  INFO 68714 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-30 19:55:33.294  INFO 68714 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2023-11-30 19:55:33.649  INFO 68714 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-30 19:55:33.654  INFO 68714 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-30 19:55:34.190  INFO 68714 --- [    Test worker] c.p.p.security.SecurityConfig            : SecurityConfiguration.CustomFilterConfigurer.configure excute
-2023-11-30 19:55:34.191  INFO 68714 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bdb6b36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@381d7c4c, org.springframework.security.web.context.SecurityContextPersistenceFilter@68ee7b3b, org.springframework.security.web.header.HeaderWriterFilter@3652dd19, org.springframework.web.filter.CorsFilter@1e3689e7, org.springframework.security.web.authentication.logout.LogoutFilter@5dd5422f, com.ptfinder.ptfinderback.security.jwt.JwtAuthenticationFilter@259f0fdb, com.ptfinder.ptfinderback.security.jwt.JwtVerificationFilter@655d5285, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ddc5857, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28901fe7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36f1bd7e, org.springframework.security.web.session.SessionManagementFilter@5c450960, org.springframework.security.web.access.ExceptionTranslationFilter@509e0253, org.springframework.security.web.access.intercept.AuthorizationFilter@381c826c]
-2023-11-30 19:55:34.329  WARN 68714 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-30 19:55:35.113  INFO 68714 --- [    Test worker] c.p.p.d.gym.service.GymServiceV1Test     : Started GymServiceV1Test in 2.955 seconds (JVM running for 3.434)
-2023-11-30 19:55:35.130  INFO 68714 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@7fcbe147 testClass = GymServiceV1Test, testInstance = com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test@3b75fdd0, testMethod = getGymTest@GymServiceV1Test, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@235f4c10 testClass = GymServiceV1Test, locations = '{}', classes = '{class com.ptfinder.ptfinderback.PtFinderBackApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@3fc9504b, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@bcef303, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@a87f8ec, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e1ef60, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3a5ecce3, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@69e1dd28], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@62243a7a]; rollback [true]
-2023-11-30 19:55:35.281 DEBUG 68714 --- [    Test worker] org.hibernate.SQL                        : 
+2023-11-30 21:25:37.305  INFO 70353 --- [    Test worker] c.p.p.d.gym.service.GymServiceV1Test     : Starting GymServiceV1Test using Java 17.0.8.1 on osihun-ui-noteubug.local with PID 70353 (started by sihun in /Users/sihun/dev/project/pt-finder/pt-finder-back)
+2023-11-30 21:25:37.305  INFO 70353 --- [    Test worker] c.p.p.d.gym.service.GymServiceV1Test     : The following 1 profile is active: &quot;dev&quot;
+2023-11-30 21:25:37.690  INFO 70353 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-30 21:25:37.691  INFO 70353 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-30 21:25:37.763  INFO 70353 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.redis.RefreshTokenRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2023-11-30 21:25:37.771  INFO 70353 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
+2023-11-30 21:25:37.776  INFO 70353 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-11-30 21:25:37.777  INFO 70353 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-30 21:25:37.786  INFO 70353 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.fee.repository.FeeJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-30 21:25:37.786  INFO 70353 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.gym.repository.GymJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-30 21:25:37.786  INFO 70353 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.review.repository.ReviewJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-30 21:25:37.787  INFO 70353 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.trainer.repository.TrainerJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-30 21:25:37.787  INFO 70353 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ptfinder.ptfinderback.domain.user.repository.UserJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2023-11-30 21:25:37.791  INFO 70353 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 Redis repository interfaces.
+2023-11-30 21:25:38.082  INFO 70353 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-30 21:25:38.102  INFO 70353 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-11-30 21:25:38.177  INFO 70353 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-11-30 21:25:38.218  INFO 70353 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-30 21:25:38.302  INFO 70353 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-30 21:25:38.309  INFO 70353 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-11-30 21:25:38.668  INFO 70353 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-30 21:25:38.673  INFO 70353 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-30 21:25:39.225  INFO 70353 --- [    Test worker] c.p.p.security.SecurityConfig            : SecurityConfiguration.CustomFilterConfigurer.configure excute
+2023-11-30 21:25:39.226  INFO 70353 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38276668, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e09c7a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1dc987b, org.springframework.security.web.header.HeaderWriterFilter@466bf366, org.springframework.web.filter.CorsFilter@2688b2be, org.springframework.security.web.authentication.logout.LogoutFilter@42bbd21c, com.ptfinder.ptfinderback.security.jwt.JwtAuthenticationFilter@30d3f583, com.ptfinder.ptfinderback.security.jwt.JwtVerificationFilter@3344c1d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66694050, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b8ba6b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73b034ca, org.springframework.security.web.session.SessionManagementFilter@2ac00dc9, org.springframework.security.web.access.ExceptionTranslationFilter@27563444, org.springframework.security.web.access.intercept.AuthorizationFilter@154cbb46]
+2023-11-30 21:25:39.382  WARN 70353 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-30 21:25:40.484  INFO 70353 --- [    Test worker] c.p.p.d.gym.service.GymServiceV1Test     : Started GymServiceV1Test in 3.333 seconds (JVM running for 3.857)
+2023-11-30 21:25:40.502  INFO 70353 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@625e134e testClass = GymServiceV1Test, testInstance = com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test@1bff4cb9, testMethod = getKNearestLocations@GymServiceV1Test, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72bd06ca testClass = GymServiceV1Test, locations = '{}', classes = '{class com.ptfinder.ptfinderback.PtFinderBackApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7e6ef134, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@648c94da, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6c0d9d86, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5dcb4f5f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@51acdf2e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@c333c60], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@1fb4377d]; rollback [true]
+2023-11-30 21:25:40.662 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
     select
         gym0_.gym_id as gym_id1_1_,
         gym0_.address as address2_1_,
@@ -165,15 +165,204 @@
     where
         gym0_.map_x=? 
         and gym0_.map_x=?
-2023-11-30 19:55:35.327 DEBUG 68714 --- [    Test worker] org.hibernate.SQL                        : 
+2023-11-30 21:25:40.707 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
     insert 
     into
         gym
         (address, business_hours_week, business_hours_weekend, created_at, gym_name, holiday, information, locker_fee, locker_yn, map_x, map_y, parking_fee, parking_yn, road_address, updated_at, wear_fee, wear) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-11-30 19:55:35.349  INFO 68714 --- [    Test worker] c.p.p.domain.gym.service.GymServiceV1    : create Gym info = GymDto(id=1, gymName=테스트용 gym, address=서울특별시 서초구 000동 123-123, roadAddress=서울특별시 서초구 00로 123, information=null, parkingYn=null, parkingFee=null, wearYn=null, wearFee=null, lockerYn=null, lockerFee=null, businessHoursWeek=null, businessHoursWeekend=null, holiday=null, mapX=123.12, mapY=123.12)
-2023-11-30 19:55:35.396  INFO 68714 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@7fcbe147 testClass = GymServiceV1Test, testInstance = com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test@3b75fdd0, testMethod = getGymTest@GymServiceV1Test, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@235f4c10 testClass = GymServiceV1Test, locations = '{}', classes = '{class com.ptfinder.ptfinderback.PtFinderBackApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@3fc9504b, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@bcef303, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@a87f8ec, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2e1ef60, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3a5ecce3, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@69e1dd28], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-11-30 21:25:40.730  INFO 70353 --- [    Test worker] c.p.p.domain.gym.service.GymServiceV1    : create Gym info = GymDto(id=15, gymName=테스트용 gym, address=서울특별시 서초구 000동 123-123, roadAddress=서울특별시 서초구 00로 123, information=null, parkingYn=null, parkingFee=null, wearYn=null, wearFee=null, lockerYn=null, lockerFee=null, businessHoursWeek=null, businessHoursWeekend=null, holiday=null, mapX=100.0, mapY=100.0)
+2023-11-30 21:25:40.739 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        gym0_.gym_id as gym_id1_1_,
+        gym0_.address as address2_1_,
+        gym0_.business_hours_week as business3_1_,
+        gym0_.business_hours_weekend as business4_1_,
+        gym0_.created_at as created_5_1_,
+        gym0_.gym_name as gym_name6_1_,
+        gym0_.holiday as holiday7_1_,
+        gym0_.information as informat8_1_,
+        gym0_.locker_fee as locker_f9_1_,
+        gym0_.locker_yn as locker_10_1_,
+        gym0_.map_x as map_x11_1_,
+        gym0_.map_y as map_y12_1_,
+        gym0_.parking_fee as parking13_1_,
+        gym0_.parking_yn as parking14_1_,
+        gym0_.road_address as road_ad15_1_,
+        gym0_.updated_at as updated16_1_,
+        gym0_.wear_fee as wear_fe17_1_,
+        gym0_.wear as wear18_1_ 
+    from
+        gym gym0_ 
+    where
+        gym0_.map_x=? 
+        and gym0_.map_x=?
+2023-11-30 21:25:40.753 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        gym
+        (address, business_hours_week, business_hours_weekend, created_at, gym_name, holiday, information, locker_fee, locker_yn, map_x, map_y, parking_fee, parking_yn, road_address, updated_at, wear_fee, wear) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-11-30 21:25:40.756  INFO 70353 --- [    Test worker] c.p.p.domain.gym.service.GymServiceV1    : create Gym info = GymDto(id=16, gymName=테스트용 gym, address=서울특별시 서초구 000동 123-123, roadAddress=서울특별시 서초구 00로 123, information=null, parkingYn=null, parkingFee=null, wearYn=null, wearFee=null, lockerYn=null, lockerFee=null, businessHoursWeek=null, businessHoursWeekend=null, holiday=null, mapX=123.12, mapY=123.12)
+2023-11-30 21:25:40.757 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        gym0_.gym_id as gym_id1_1_,
+        gym0_.address as address2_1_,
+        gym0_.business_hours_week as business3_1_,
+        gym0_.business_hours_weekend as business4_1_,
+        gym0_.created_at as created_5_1_,
+        gym0_.gym_name as gym_name6_1_,
+        gym0_.holiday as holiday7_1_,
+        gym0_.information as informat8_1_,
+        gym0_.locker_fee as locker_f9_1_,
+        gym0_.locker_yn as locker_10_1_,
+        gym0_.map_x as map_x11_1_,
+        gym0_.map_y as map_y12_1_,
+        gym0_.parking_fee as parking13_1_,
+        gym0_.parking_yn as parking14_1_,
+        gym0_.road_address as road_ad15_1_,
+        gym0_.updated_at as updated16_1_,
+        gym0_.wear_fee as wear_fe17_1_,
+        gym0_.wear as wear18_1_ 
+    from
+        gym gym0_ 
+    where
+        gym0_.map_x=? 
+        and gym0_.map_x=?
+2023-11-30 21:25:40.761 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        gym
+        (address, business_hours_week, business_hours_weekend, created_at, gym_name, holiday, information, locker_fee, locker_yn, map_x, map_y, parking_fee, parking_yn, road_address, updated_at, wear_fee, wear) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-11-30 21:25:40.766  INFO 70353 --- [    Test worker] c.p.p.domain.gym.service.GymServiceV1    : create Gym info = GymDto(id=17, gymName=테스트용 gym, address=서울특별시 서초구 000동 123-123, roadAddress=서울특별시 서초구 00로 123, information=null, parkingYn=null, parkingFee=null, wearYn=null, wearFee=null, lockerYn=null, lockerFee=null, businessHoursWeek=null, businessHoursWeekend=null, holiday=null, mapX=143.121, mapY=100.12)
+2023-11-30 21:25:40.767 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        gym0_.gym_id as gym_id1_1_,
+        gym0_.address as address2_1_,
+        gym0_.business_hours_week as business3_1_,
+        gym0_.business_hours_weekend as business4_1_,
+        gym0_.created_at as created_5_1_,
+        gym0_.gym_name as gym_name6_1_,
+        gym0_.holiday as holiday7_1_,
+        gym0_.information as informat8_1_,
+        gym0_.locker_fee as locker_f9_1_,
+        gym0_.locker_yn as locker_10_1_,
+        gym0_.map_x as map_x11_1_,
+        gym0_.map_y as map_y12_1_,
+        gym0_.parking_fee as parking13_1_,
+        gym0_.parking_yn as parking14_1_,
+        gym0_.road_address as road_ad15_1_,
+        gym0_.updated_at as updated16_1_,
+        gym0_.wear_fee as wear_fe17_1_,
+        gym0_.wear as wear18_1_ 
+    from
+        gym gym0_ 
+    where
+        gym0_.map_x=? 
+        and gym0_.map_x=?
+2023-11-30 21:25:40.772 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        gym
+        (address, business_hours_week, business_hours_weekend, created_at, gym_name, holiday, information, locker_fee, locker_yn, map_x, map_y, parking_fee, parking_yn, road_address, updated_at, wear_fee, wear) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-11-30 21:25:40.778  INFO 70353 --- [    Test worker] c.p.p.domain.gym.service.GymServiceV1    : create Gym info = GymDto(id=18, gymName=테스트용 gym, address=서울특별시 서초구 000동 123-123, roadAddress=서울특별시 서초구 00로 123, information=null, parkingYn=null, parkingFee=null, wearYn=null, wearFee=null, lockerYn=null, lockerFee=null, businessHoursWeek=null, businessHoursWeekend=null, holiday=null, mapX=12.11, mapY=1000.12)
+2023-11-30 21:25:40.779 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        gym0_.gym_id as gym_id1_1_,
+        gym0_.address as address2_1_,
+        gym0_.business_hours_week as business3_1_,
+        gym0_.business_hours_weekend as business4_1_,
+        gym0_.created_at as created_5_1_,
+        gym0_.gym_name as gym_name6_1_,
+        gym0_.holiday as holiday7_1_,
+        gym0_.information as informat8_1_,
+        gym0_.locker_fee as locker_f9_1_,
+        gym0_.locker_yn as locker_10_1_,
+        gym0_.map_x as map_x11_1_,
+        gym0_.map_y as map_y12_1_,
+        gym0_.parking_fee as parking13_1_,
+        gym0_.parking_yn as parking14_1_,
+        gym0_.road_address as road_ad15_1_,
+        gym0_.updated_at as updated16_1_,
+        gym0_.wear_fee as wear_fe17_1_,
+        gym0_.wear as wear18_1_ 
+    from
+        gym gym0_ 
+    where
+        gym0_.map_x=? 
+        and gym0_.map_x=?
+2023-11-30 21:25:40.782 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        gym
+        (address, business_hours_week, business_hours_weekend, created_at, gym_name, holiday, information, locker_fee, locker_yn, map_x, map_y, parking_fee, parking_yn, road_address, updated_at, wear_fee, wear) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-11-30 21:25:40.785  INFO 70353 --- [    Test worker] c.p.p.domain.gym.service.GymServiceV1    : create Gym info = GymDto(id=19, gymName=테스트용 gym, address=서울특별시 서초구 000동 123-123, roadAddress=서울특별시 서초구 00로 123, information=null, parkingYn=null, parkingFee=null, wearYn=null, wearFee=null, lockerYn=null, lockerFee=null, businessHoursWeek=null, businessHoursWeekend=null, holiday=null, mapX=111.121, mapY=100.12)
+2023-11-30 21:25:40.786 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        gym0_.gym_id as gym_id1_1_,
+        gym0_.address as address2_1_,
+        gym0_.business_hours_week as business3_1_,
+        gym0_.business_hours_weekend as business4_1_,
+        gym0_.created_at as created_5_1_,
+        gym0_.gym_name as gym_name6_1_,
+        gym0_.holiday as holiday7_1_,
+        gym0_.information as informat8_1_,
+        gym0_.locker_fee as locker_f9_1_,
+        gym0_.locker_yn as locker_10_1_,
+        gym0_.map_x as map_x11_1_,
+        gym0_.map_y as map_y12_1_,
+        gym0_.parking_fee as parking13_1_,
+        gym0_.parking_yn as parking14_1_,
+        gym0_.road_address as road_ad15_1_,
+        gym0_.updated_at as updated16_1_,
+        gym0_.wear_fee as wear_fe17_1_,
+        gym0_.wear as wear18_1_ 
+    from
+        gym gym0_ 
+    where
+        gym0_.map_x=? 
+        and gym0_.map_x=?
+2023-11-30 21:25:40.789 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        gym
+        (address, business_hours_week, business_hours_weekend, created_at, gym_name, holiday, information, locker_fee, locker_yn, map_x, map_y, parking_fee, parking_yn, road_address, updated_at, wear_fee, wear) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-11-30 21:25:40.792  INFO 70353 --- [    Test worker] c.p.p.domain.gym.service.GymServiceV1    : create Gym info = GymDto(id=20, gymName=테스트용 gym, address=서울특별시 서초구 000동 123-123, roadAddress=서울특별시 서초구 00로 123, information=null, parkingYn=null, parkingFee=null, wearYn=null, wearFee=null, lockerYn=null, lockerFee=null, businessHoursWeek=null, businessHoursWeekend=null, holiday=null, mapX=1010.121, mapY=777.12)
+2023-11-30 21:25:40.799 DEBUG 70353 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        gym0_.gym_id as gym_id1_1_,
+        gym0_.address as address2_1_,
+        gym0_.business_hours_week as business3_1_,
+        gym0_.business_hours_weekend as business4_1_,
+        gym0_.created_at as created_5_1_,
+        gym0_.gym_name as gym_name6_1_,
+        gym0_.holiday as holiday7_1_,
+        gym0_.information as informat8_1_,
+        gym0_.locker_fee as locker_f9_1_,
+        gym0_.locker_yn as locker_10_1_,
+        gym0_.map_x as map_x11_1_,
+        gym0_.map_y as map_y12_1_,
+        gym0_.parking_fee as parking13_1_,
+        gym0_.parking_yn as parking14_1_,
+        gym0_.road_address as road_ad15_1_,
+        gym0_.updated_at as updated16_1_,
+        gym0_.wear_fee as wear_fe17_1_,
+        gym0_.wear as wear18_1_ 
+    from
+        gym gym0_
+2023-11-30 21:26:32.254  WARN 70353 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s846ms).
+[GymLocationDto(id=15, gymName=테스트용 gym, mapX=100.0, mapY=100.0, distance=0.0), GymLocationDto(id=19, gymName=테스트용 gym, mapX=111.121, mapY=100.12, distance=11.12165), GymLocationDto(id=16, gymName=테스트용 gym, mapX=123.12, mapY=123.12, distance=32.69662)]
+2023-11-30 21:27:27.892  INFO 70353 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@625e134e testClass = GymServiceV1Test, testInstance = com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test@1bff4cb9, testMethod = getKNearestLocations@GymServiceV1Test, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72bd06ca testClass = GymServiceV1Test, locations = '{}', classes = '{class com.ptfinder.ptfinderback.PtFinderBackApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7e6ef134, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@648c94da, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6c0d9d86, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5dcb4f5f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@51acdf2e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@c333c60], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
 </pre>
 </span>
 </div>
@@ -185,7 +374,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.2.1</a> at 2023. 11. 30. 오후 7:55:35</p>
+<a href="http://www.gradle.org">Gradle 8.2.1</a> at 2023. 11. 30. 오후 9:27:30</p>
 </div>
 </div>
 </body>
