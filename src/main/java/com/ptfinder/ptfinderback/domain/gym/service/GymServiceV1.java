@@ -1,7 +1,7 @@
 package com.ptfinder.ptfinderback.domain.gym.service;
 
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
-import com.ptfinder.ptfinderback.domain.gym.dto.GymCreateDto;
+import com.ptfinder.ptfinderback.domain.gym.dto.GymInquireDto;
 import com.ptfinder.ptfinderback.domain.gym.dto.GymDto;
 import com.ptfinder.ptfinderback.domain.gym.dto.GymLocationDto;
 import com.ptfinder.ptfinderback.domain.gym.repository.GymDslRepository;
@@ -22,11 +22,11 @@ public class GymServiceV1 implements GymService{
     private final ModelMapper mapper;
 
     @Override
-    public GymDto getGym(GymCreateDto gymCreateDto) {
-        Optional<Gym> findGyms = gymDslRepository.findOneByGymNameAndMapXAndMapY(gymCreateDto);
+    public GymDto getGym(GymInquireDto gymInquireDto) {
+        Optional<Gym> findGyms = gymDslRepository.findOneByGymNameAndMapXAndMapY(gymInquireDto);
 
         if(findGyms.isEmpty()){
-            return createGym(gymCreateDto);
+            return createGym(gymInquireDto);
         } else {
             return mapper.map(findGyms.get(), GymDto.class);
         }
@@ -63,8 +63,8 @@ public class GymServiceV1 implements GymService{
 
         return result;
     }
-    public GymDto createGym(GymCreateDto gymCreateDto) {
-        Gym gym = Gym.create(gymCreateDto);
+    public GymDto createGym(GymInquireDto gymInquireDto) {
+        Gym gym = Gym.create(gymInquireDto);
         Gym savedGym = gymJpaRepository.save(gym);
         GymDto result = mapper.map(savedGym, GymDto.class);
         log.info("create Gym info = {}", result);

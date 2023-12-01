@@ -1,9 +1,10 @@
 package com.ptfinder.ptfinderback.domain.trainer.controller;
 
-import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
+import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerResponseDto;
 import com.ptfinder.ptfinderback.domain.trainer.service.TrainerService;
+import com.ptfinder.ptfinderback.domain.user.service.UserProvider;
 import com.ptfinder.ptfinderback.global.result.ResultCode;
 import com.ptfinder.ptfinderback.global.result.ResultResponse;
 import lombok.RequiredArgsConstructor;
@@ -21,8 +22,9 @@ public class TrainerController {
 
     private final TrainerService trainerService;
     private final ModelMapper mapper;
+    private final UserProvider userProvider;
 
-    @PostMapping("")
+    @PostMapping
     public ResponseEntity<ResultResponse> createTrainer(
             @RequestBody TrainerCreateDto trainerCreateDto
     ){
@@ -33,5 +35,19 @@ public class TrainerController {
         ResultResponse result = ResultResponse.of(ResultCode.TRAINER_CREATE_SUCCESS, trainerResponseDto);
         return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
+
+    @PutMapping("/gym/{gymId}")
+    public ResponseEntity<ResultResponse> updateTrainersGym(
+            @RequestHeader String token,
+            @PathVariable Long gymId
+    ){
+        String email = userProvider.getUserByToken(token);
+
+        TrainerDto trainerDto = trainerService.updateGym(email, gymId);
+
+        ResultResponse result = ResultResponse.of(ResultCode.TRAINER_UPDATE_SUCCESS, trainerDto);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
 
 }

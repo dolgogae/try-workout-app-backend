@@ -1,6 +1,6 @@
 package com.ptfinder.ptfinderback.domain.gym.data;
 
-import com.ptfinder.ptfinderback.domain.gym.dto.GymCreateDto;
+import com.ptfinder.ptfinderback.domain.gym.dto.GymInquireDto;
 import com.ptfinder.ptfinderback.domain.trainer.data.Trainer;
 import lombok.Builder;
 import lombok.Getter;
@@ -93,13 +93,13 @@ public class Gym {
         this.mapY = mapY;
     }
 
-    public static Gym create(GymCreateDto gymCreateDto){
+    public static Gym create(GymInquireDto gymInquireDto){
         return Gym.builder()
-                .gymName(gymCreateDto.getGymName())
-                .address(gymCreateDto.getAddress())
-                .roadAddress(gymCreateDto.getRoadAddress())
-                .mapX(gymCreateDto.getMapX())
-                .mapY(gymCreateDto.getMapY())
+                .gymName(gymInquireDto.getGymName())
+                .address(gymInquireDto.getAddress())
+                .roadAddress(gymInquireDto.getRoadAddress())
+                .mapX(gymInquireDto.getMapX())
+                .mapY(gymInquireDto.getMapY())
                 .build();
     }
 }

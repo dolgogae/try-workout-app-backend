@@ -1,4 +1,17 @@
 package com.ptfinder.ptfinderback.domain.fee.dto;
 
+import lombok.*;
+
+@Data
+@Builder
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class FeeDto {
+
+    private Integer times;
+    private Integer price;
+    private Float discountRate;
+    private Float getDiscountRate;
+    private Long trainerId;
 }

@@ -1,6 +1,6 @@
 package com.ptfinder.ptfinderback.domain.gym.controller;
 
-import com.ptfinder.ptfinderback.domain.gym.dto.GymCreateDto;
+import com.ptfinder.ptfinderback.domain.gym.dto.GymInquireDto;
 import com.ptfinder.ptfinderback.domain.gym.dto.GymDto;
 import com.ptfinder.ptfinderback.domain.gym.dto.GymLocationDto;
 import com.ptfinder.ptfinderback.domain.gym.service.GymService;
@@ -26,7 +26,7 @@ public class GymController {
 
     private final GymService gymService;
 
-    @GetMapping("")
+    @GetMapping
     public ResponseEntity<ResultResponse> getGym (
         @RequestParam @NotBlank String gymName,
         @RequestParam @NotBlank Float mapX,
@@ -35,7 +35,7 @@ public class GymController {
         @RequestParam(required = false) String roadAddress
     ){
 
-        GymCreateDto gymCreateDto = GymCreateDto.builder()
+        GymInquireDto gymInquireDto = GymInquireDto.builder()
                 .gymName(gymName)
                 .address(address)
                 .roadAddress(roadAddress)
@@ -43,7 +43,7 @@ public class GymController {
                 .mapY(mapY)
                 .build();
 
-        GymDto gymDto = gymService.getGym(gymCreateDto);
+        GymDto gymDto = gymService.getGym(gymInquireDto);
 
         ResultResponse result = ResultResponse.of(ResultCode.GET_GYM_SUCCESS, gymDto);
         return new ResponseEntity<>(result, HttpStatus.OK);

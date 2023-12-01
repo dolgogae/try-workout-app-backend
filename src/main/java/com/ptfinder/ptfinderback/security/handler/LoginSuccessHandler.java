@@ -19,9 +19,6 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         String accessToken = response.getHeader("Authorization");
         String refreshToken = response.getHeader("Refresh");
 
-//        log.info(accessToken);
-//        log.info(refreshToken);
-
         String redirectUrl = getRedirectUrl(accessToken, refreshToken);
         log.info(redirectUrl);
 

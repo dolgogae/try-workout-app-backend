@@ -35,6 +35,7 @@ public class FeeServiceV1 implements FeeService{
         Fee savedFee = feeJpaRepository.save(fee);
 
         FeeDto result = mapper.map(savedFee, FeeDto.class);
+        result.setTrainerId(feeCreateDto.getTrainerId());
 
         return result;
     }

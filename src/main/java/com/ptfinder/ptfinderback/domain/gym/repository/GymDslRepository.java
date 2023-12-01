@@ -1,7 +1,7 @@
 package com.ptfinder.ptfinderback.domain.gym.repository;
 
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
-import com.ptfinder.ptfinderback.domain.gym.dto.GymCreateDto;
+import com.ptfinder.ptfinderback.domain.gym.dto.GymInquireDto;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ public class GymDslRepository {
 
     private final JPAQueryFactory jpaQueryFactory;
 
-    public Optional<Gym> findOneByGymNameAndMapXAndMapY(GymCreateDto createCondition){
+    public Optional<Gym> findOneByGymNameAndMapXAndMapY(GymInquireDto createCondition){
         return Optional.ofNullable(jpaQueryFactory
                 .selectFrom(gym)
                 .where(

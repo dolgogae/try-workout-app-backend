@@ -3,7 +3,6 @@ package com.ptfinder.ptfinderback.domain.trainer.data;
 import com.ptfinder.ptfinderback.domain.fee.data.Fee;
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
-import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerDto;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
 import lombok.Builder;
 import lombok.Getter;
@@ -47,7 +46,7 @@ public class Trainer {
     @ElementCollection(fetch = FetchType.LAZY)
     private List<String> qualifications = new ArrayList<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "GYM_ID")
     private Gym gym;
 
@@ -70,6 +69,11 @@ public class Trainer {
                 .user(user)
                 .gym(gym)
                 .build();
+    }
+
+    public Trainer updateGym(Gym gym){
+        this.gym = gym;
+        return this;
     }
 
 }

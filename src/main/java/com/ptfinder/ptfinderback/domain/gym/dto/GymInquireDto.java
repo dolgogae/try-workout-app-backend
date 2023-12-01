@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class GymCreateDto {
+public class GymInquireDto {
 
     @NotBlank
     private String gymName;
