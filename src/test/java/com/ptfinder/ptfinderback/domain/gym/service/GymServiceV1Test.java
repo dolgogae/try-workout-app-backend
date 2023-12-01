@@ -100,6 +100,6 @@ class GymServiceV1Test {
 
         // then
         assertThat(kNearestLocations.size()).isEqualTo(3);
-        System.out.println(kNearestLocations);
+
     }
 }
