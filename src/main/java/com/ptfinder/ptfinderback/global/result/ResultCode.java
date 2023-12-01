@@ -17,7 +17,11 @@ public enum ResultCode {
 
     // TRAINER
     TRAINER_CREATE_SUCCESS(201, "TR001", "트레이너 생성을 성공했습니다."),
-    TRAINER_UPDATE_SUCCESS(200, "TR002", "트레이너 정보 업데이트에 성공했습니다.");
+    TRAINER_UPDATE_SUCCESS(200, "TR002", "트레이너 정보 업데이트에 성공했습니다."),
+
+    // GYM
+    GET_GYM_SUCCESS(200, "G001", "체육관을 가져오는데 성공했습니다"),
+    GET_NEAREST_GYM_SUCCESS(200, "G001", "가까운 체육관 갯수를 가져오는데 성공했습니다.");
 
     private int status;
     private final String code;
