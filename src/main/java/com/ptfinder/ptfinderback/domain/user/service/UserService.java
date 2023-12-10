@@ -6,8 +6,8 @@ import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
 public interface UserService {
 
     UserDto createUser(UserCreateDto userCreateDto);
-    UserDto updateUser(UserDto userDto);
     UserDto getUser(String email);
-    UserDto deleteUser(UserDto userDto);
+    void deleteUser(String token);
     UserDto findUserAndUpdateTokens(Long id, String accessToken, String refreshToken);
+    UserDto updatePhoneNumber(String token, String phoneNumber);
 }

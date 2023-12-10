@@ -11,10 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -26,11 +23,11 @@ public class UserController {
     private final UserProvider userProvider;
     private final ModelMapper mapper;
 
-    @GetMapping("")
+    @GetMapping
     public ResponseEntity<ResultResponse> getUser(
             @RequestHeader String token
     ){
-        String email = userProvider.getUserByToken(token);
+        String email = userProvider.getUserEmailByToken(token);
         // {sub = email 주소, iat=1694171245, exp=1694430445}
         log.info("userDto email {}", email);
 
@@ -38,6 +35,28 @@ public class UserController {
         UserResponseDto responseDto = mapper.map(userDto, UserResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.GET_MY_INFO_SUCCESS, responseDto);
+        return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
+    }
+
+    @PutMapping("phone-number")
+    public ResponseEntity<ResultResponse> updatePhoneNumber(
+        @RequestHeader String token,
+        @RequestBody String phoneNumber
+    ){
+        UserDto userDto = userService.updatePhoneNumber(token, phoneNumber);
+        UserResponseDto responseDto = mapper.map(userDto, UserResponseDto.class);
+
+        ResultResponse result = ResultResponse.of(ResultCode.UPDATE_SUCCESS, responseDto);
+        return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
+    }
+
+    @DeleteMapping
+    public ResponseEntity<ResultResponse> deleteUser(
+            @RequestHeader String token
+    ){
+        userService.deleteUser(token);
+
+        ResultResponse result = ResultResponse.of(ResultCode.DELETE_SUCCESS, "delete success");
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
     }
 }

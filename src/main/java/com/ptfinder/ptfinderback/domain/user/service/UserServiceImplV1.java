@@ -1,6 +1,5 @@
 package com.ptfinder.ptfinderback.domain.user.service;
 
-import com.ptfinder.ptfinderback.domain.user.AccountType;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
 import com.ptfinder.ptfinderback.domain.user.dto.UserCreateDto;
 import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
@@ -12,18 +11,21 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class UserServiceImplV1 implements UserService{
 
     private final UserJpaRepository userJpaRepository;
+    private final UserProvider userProvider;
     private final ModelMapper mapper;
 
     @Override
     public UserDto createUser(UserCreateDto userCreateDto) {
+        if(userJpaRepository.findByEmail(userCreateDto.getEmail()).isPresent()){
+            throw new BusinessException(ErrorCode.USER_EMAIL_ALREADY_EXISTS);
+        }
+
         UserDto userDto = mapper.map(userCreateDto, UserDto.class);
         UserEntity userEntity = UserEntity.create(userDto);
         UserEntity savedUser = userJpaRepository.save(userEntity);
@@ -32,11 +34,6 @@ public class UserServiceImplV1 implements UserService{
         log.info("create User = {}", result.toString());
 
         return result;
-    }
-
-    @Override
-    public UserDto updateUser(UserDto userDto) {
-        return null;
     }
 
     @Override
@@ -52,20 +49,36 @@ public class UserServiceImplV1 implements UserService{
     }
 
     @Override
-    public UserDto deleteUser(UserDto userDto) {
-        return null;
+    public void deleteUser(String token) {
+        String email = userProvider.getUserEmailByToken(token);
+        UserEntity userEntity = userJpaRepository.findByEmail(email).orElseThrow(() ->
+                new BusinessException(ErrorCode.USER_NOT_EXIST));
+        userJpaRepository.deleteById(userEntity.getId());
     }
 
     @Override
     public UserDto findUserAndUpdateTokens(Long id, String accessToken, String refreshToken) {
         UserEntity user = userJpaRepository.findById(id).orElseThrow(() ->
                 new BusinessException(ErrorCode.USER_NOT_EXIST));
-        user.setTokens(accessToken, refreshToken);
+        user.updateTokens(accessToken, refreshToken);
 
         UserEntity savedUser = userJpaRepository.save(user);
 
-        UserDto userDto = mapper.map(savedUser, UserDto.class);
+        UserDto result = mapper.map(savedUser, UserDto.class);
 
-        return userDto;
+        return result;
     }
+
+    @Override
+    public UserDto updatePhoneNumber(String token, String phoneNumber) {
+        String email = userProvider.getUserEmailByToken(token);
+        UserEntity userEntity = userJpaRepository.findByEmail(email).orElseThrow(() ->
+                new BusinessException(ErrorCode.USER_NOT_EXIST)
+        );
+
+        UserEntity savedUser = userEntity.updatePhoneNumber(phoneNumber);
+        UserDto result = mapper.map(savedUser, UserDto.class);
+        return result;
+    }
+
 }

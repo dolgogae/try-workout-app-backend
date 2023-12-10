@@ -58,4 +58,9 @@ public class Fee {
                 .trainer(trainer)
                 .build();
     }
+
+    public Fee updateDiscountRate(Float discountRate){
+        this.discountRate = discountRate;
+        return this;
+    }
 }

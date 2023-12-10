@@ -31,6 +31,11 @@ public class JwtVerificationFilter extends OncePerRequestFilter {
                     "/auth/login/callback",
                     "/auth/reissue",
                     "/trainer/create");
+    private static final List<String> TRAINER_AUTH_URL =
+            List.of("/trainer/**",
+                    "/fee/**");
+    private static final List<String> MEMBER_AUTH_URL =
+            List.of("/member/**");
     private final JwtTokenProvider jwtTokenProvider;
     private final RedisUtils redisUtils;
 
@@ -66,8 +71,7 @@ public class JwtVerificationFilter extends OncePerRequestFilter {
 
     // EXCLUDE_URL과 동일한 요청이 들어왔을 경우, 현재 필터를 진행하지 않고 다음 필터 진행
     @Override
-    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-//        log.info(request.getServletPath());
+    protected boolean shouldNotFilter(HttpServletRequest request) {
         boolean result = EXCLUDE_URL.stream().anyMatch(exclude -> exclude.equalsIgnoreCase(request.getServletPath()));
 
         return result;

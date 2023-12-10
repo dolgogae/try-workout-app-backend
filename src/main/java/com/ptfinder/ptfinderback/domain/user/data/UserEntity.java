@@ -52,6 +52,9 @@ public class UserEntity {
     @Column(name = "REFRESH_TOKEN", length = 2000)
     private String refreshToken;
 
+    @Column(name = "PHONE_NUMBER")
+    private String phoneNumber = "";
+
     @CreatedDate
     private LocalDateTime createdAt;
 
@@ -59,7 +62,8 @@ public class UserEntity {
     private LocalDateTime updatedAt;
 
     @Builder
-    private UserEntity(String username, String email, String password, UserRole userRole, AccountType accountType) {
+    private UserEntity(String username, String email, String password,
+                       UserRole userRole, AccountType accountType) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -77,9 +81,14 @@ public class UserEntity {
                 .build();
     }
 
-    public UserEntity setTokens(String accessToken, String refreshToken){
+    public UserEntity updateTokens(String accessToken, String refreshToken){
         this.accessToken = accessToken;
         this.refreshToken = refreshToken;
+        return this;
+    }
+
+    public UserEntity updatePhoneNumber(String phoneNumber){
+        this.phoneNumber = phoneNumber;
         return this;
     }
 }

@@ -14,6 +14,7 @@ public enum ErrorCode {
     INVALID_TYPE_VALUE(400, "C004", "invalid type value"),
     BAD_CREDENTIALS(400, "C005", "bad credentials"),
     TOKEN_NOT_EXIST(401, "C006", "token is null"),
+    UNAUTHORIZED(401, "C006", "unauthorized"),
 
     // User
     USER_NOT_EXIST(404, "M001", "member not exist"),
@@ -37,7 +38,10 @@ public enum ErrorCode {
     DECRYPTION_FAILED(400, "E002", "Decryption failed"),
 
     // GYM
-    GYM_NOT_FOUND(400, "G001", "Gym is not exist");
+    GYM_NOT_FOUND(400, "G001", "Gym is not exist"),
+
+    // FEE
+    FEE_NOT_FOUND(400, "F001", "FEE is not exist");
 
     private int status;
     private final String code;

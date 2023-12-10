@@ -42,6 +42,19 @@ public class FeeServiceV1 implements FeeService{
 
     @Override
     public FeeDto updateDiscountRate(DiscountRateUpdateDto discountRateUpdateDto) {
-        return null;
+        Fee fee = feeJpaRepository.findById(discountRateUpdateDto.getFeeId()).orElseThrow(() ->
+                new BusinessException(ErrorCode.FEE_NOT_FOUND));
+
+        Fee updatedFee = fee.updateDiscountRate(discountRateUpdateDto.getDiscountRate());
+
+        FeeDto result = mapper.map(updatedFee, FeeDto.class);
+        result.setTrainerId(updatedFee.getTrainer().getId());
+
+        return result;
+    }
+
+    @Override
+    public void deleteFee(Long feeId) {
+        feeJpaRepository.deleteById(feeId);
     }
 }

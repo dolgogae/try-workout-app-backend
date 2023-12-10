@@ -8,4 +8,5 @@ public interface FeeService {
 
     FeeDto createFee(FeeCreateDto feeCreateDto);
     FeeDto updateDiscountRate(DiscountRateUpdateDto discountRateUpdateDto);
+    void deleteFee(Long feeId);
 }

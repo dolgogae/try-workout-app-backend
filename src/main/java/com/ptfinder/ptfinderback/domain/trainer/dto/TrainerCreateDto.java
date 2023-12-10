@@ -15,4 +15,5 @@ public class TrainerCreateDto {
     @NotBlank
     private String introduction;
     private Long gymId;
+    private String trainerType;
 }

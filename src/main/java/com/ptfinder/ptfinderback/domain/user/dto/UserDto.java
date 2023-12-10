@@ -13,4 +13,5 @@ public class UserDto {
     private String password;
     private String userRole;
     private String accountType;
+    private String phoneNumber;
 }

@@ -41,7 +41,7 @@ public class TrainerController {
             @RequestHeader String token,
             @PathVariable Long gymId
     ){
-        String email = userProvider.getUserByToken(token);
+        String email = userProvider.getUserEmailByToken(token);
 
         TrainerDto trainerDto = trainerService.updateGym(email, gymId);
 

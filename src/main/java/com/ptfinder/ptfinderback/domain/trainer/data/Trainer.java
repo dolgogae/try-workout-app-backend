@@ -2,6 +2,7 @@ package com.ptfinder.ptfinderback.domain.trainer.data;
 
 import com.ptfinder.ptfinderback.domain.fee.data.Fee;
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
+import com.ptfinder.ptfinderback.domain.trainer.TrainerType;
 import com.ptfinder.ptfinderback.domain.trainer.dto.TrainerCreateDto;
 import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
 import lombok.Builder;
@@ -50,6 +51,10 @@ public class Trainer {
     @JoinColumn(name = "GYM_ID")
     private Gym gym;
 
+    @Column(name = "TRAINER_TYPE")
+    @Enumerated(value = EnumType.STRING)
+    private TrainerType trainerType;
+
     @CreatedDate
     private LocalDateTime createdAt;
 
@@ -57,10 +62,11 @@ public class Trainer {
     private LocalDateTime updatedAt;
 
     @Builder
-    private Trainer(UserEntity user, String introduction, Gym gym) {
+    private Trainer(UserEntity user, String introduction, Gym gym, TrainerType trainerType) {
         this.user = user;
         this.introduction = introduction;
         this.gym = gym;
+        this.trainerType = trainerType;
     }
 
     public static Trainer create(TrainerCreateDto trainerDto, UserEntity user, Gym gym){
@@ -68,6 +74,7 @@ public class Trainer {
                 .introduction(trainerDto.getIntroduction())
                 .user(user)
                 .gym(gym)
+                .trainerType(TrainerType.valueOf(trainerDto.getTrainerType()))
                 .build();
     }
 

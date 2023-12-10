@@ -1,5 +1,6 @@
 package com.ptfinder.ptfinderback.domain.user.dto;
 
+import com.ptfinder.ptfinderback.domain.user.dto.validator.PhoneNumber;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
@@ -36,4 +37,8 @@ public class UserCreateDto {
     @NotBlank
     @Schema(description = "계정 종류", example = "GOOGLE, NORMAL")
     private String accountType;
+
+    @PhoneNumber
+    private String phoneNumber;
+
 }
