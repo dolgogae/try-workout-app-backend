@@ -5,7 +5,7 @@ import com.ptfinder.ptfinderback.domain.fee.dto.FeeCreateDto;
 import com.ptfinder.ptfinderback.domain.fee.dto.FeeDto;
 import com.ptfinder.ptfinderback.domain.fee.dto.FeeResponseDto;
 import com.ptfinder.ptfinderback.domain.fee.service.FeeService;
-import com.ptfinder.ptfinderback.domain.user.service.UserProvider;
+import com.ptfinder.ptfinderback.domain.trainer.service.TrainerService;
 import com.ptfinder.ptfinderback.global.result.ResultCode;
 import com.ptfinder.ptfinderback.global.result.ResultResponse;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 public class FeeController {
 
     private final FeeService feeService;
-    private final UserProvider userProvider;
+    private final TrainerService trainerService;
     private final ModelMapper mapper;
 
     @PostMapping

@@ -36,18 +36,15 @@ public class TrainerController {
         return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
 
-    @PutMapping("/gym/{gymId}")
+    @PutMapping("/{trainerId}/gym/{gymId}")
     public ResponseEntity<ResultResponse> updateTrainersGym(
             @RequestHeader String token,
+            @PathVariable Long trainerId,
             @PathVariable Long gymId
     ){
-        String email = userProvider.getUserEmailByToken(token);
-
-        TrainerDto trainerDto = trainerService.updateGym(email, gymId);
+        TrainerDto trainerDto = trainerService.updateGym(trainerId, gymId);
 
         ResultResponse result = ResultResponse.of(ResultCode.TRAINER_UPDATE_SUCCESS, trainerDto);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
-
-
 }

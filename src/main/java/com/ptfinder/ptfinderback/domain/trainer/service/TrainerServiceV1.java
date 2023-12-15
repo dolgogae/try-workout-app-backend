@@ -1,6 +1,5 @@
 package com.ptfinder.ptfinderback.domain.trainer.service;
 
-import com.ptfinder.ptfinderback.domain.fee.dto.FeeCreateDto;
 import com.ptfinder.ptfinderback.domain.gym.data.Gym;
 import com.ptfinder.ptfinderback.domain.gym.repository.GymJpaRepository;
 import com.ptfinder.ptfinderback.domain.gym.service.GymService;
@@ -54,13 +53,13 @@ public class TrainerServiceV1 implements TrainerService{
     }
 
     @Override
-    public TrainerDto updateGym(String email, Long gymId) {
-        UserEntity userEntity = userJpaRepository.findTrainerUserByEmail(email).orElseThrow(() ->
+    public TrainerDto updateGym(Long trainerId, Long gymId) {
+        Trainer findTrainer = trainerJpaRepository.findById(trainerId).orElseThrow(() ->
                 new BusinessException(ErrorCode.USER_NOT_EXIST));
         Gym gym = gymJpaRepository.findById(gymId).orElseThrow(() ->
                 new BusinessException(ErrorCode.GYM_NOT_FOUND));
 
-        Trainer trainer = userEntity.getTrainer().updateGym(gym);
+        Trainer trainer = findTrainer.registerGym(gym);
         log.info("trainer id = {}", trainer.getId());
         Trainer updatedTrainer = trainerJpaRepository.save(trainer);
 
@@ -68,17 +67,6 @@ public class TrainerServiceV1 implements TrainerService{
         result.setGymId(gymId);
 
         return result;
-    }
-
-    /**
-     * fee create 할때 생성 -> 따로 controller 만들 필요 없을 듯
-     * @param trainerID
-     * @param feeCreateDto
-     * @return
-     */
-    @Override
-    public TrainerDto updateFee(Long trainerID, FeeCreateDto feeCreateDto) {
-        return null;
     }
 
     private TrainerDto makeTrainerDto(Trainer savedTrainer) {

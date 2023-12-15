@@ -13,7 +13,7 @@ public interface UserJpaRepository extends JpaRepository<UserEntity, Long> {
     Optional<UserEntity> findByEmailAndAccountType(String email, AccountType accountType);
     Optional<UserEntity> findById(Long id);
     @Query("SELECT u FROM UserEntity u " +
-            "JOIN FETCH u.trainer t " +
+            "JOIN FETCH u.trainers t " +
             "WHERE u.email = :email")
     Optional<UserEntity> findTrainerUserByEmail(String email);
 }

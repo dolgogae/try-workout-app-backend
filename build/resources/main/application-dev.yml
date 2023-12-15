@@ -5,6 +5,8 @@ spring:
     activate:
       on-profile: dev
   datasource:
+    hikari:
+      maximum-pool-size: 20
     url: jdbc:mysql://localhost:3399/pt_finder?useSSL=false&allowPublicKeyRetrieval=true
     username: pt-user
     password: dhtlgns731!

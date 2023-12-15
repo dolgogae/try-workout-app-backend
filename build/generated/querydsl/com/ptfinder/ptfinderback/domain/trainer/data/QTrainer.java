@@ -34,6 +34,8 @@ public class QTrainer extends EntityPathBase<Trainer> {
 
     public final ListPath<String, StringPath> qualifications = this.<String, StringPath>createList("qualifications", String.class, StringPath.class, PathInits.DIRECT2);
 
+    public final EnumPath<com.ptfinder.ptfinderback.domain.trainer.TrainerType> trainerType = createEnum("trainerType", com.ptfinder.ptfinderback.domain.trainer.TrainerType.class);
+
     public final DateTimePath<java.time.LocalDateTime> updatedAt = createDateTime("updatedAt", java.time.LocalDateTime.class);
 
     public final com.ptfinder.ptfinderback.domain.user.data.QUserEntity user;
@@ -57,7 +59,7 @@ public class QTrainer extends EntityPathBase<Trainer> {
     public QTrainer(Class<? extends Trainer> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
         this.gym = inits.isInitialized("gym") ? new com.ptfinder.ptfinderback.domain.gym.data.QGym(forProperty("gym")) : null;
-        this.user = inits.isInitialized("user") ? new com.ptfinder.ptfinderback.domain.user.data.QUserEntity(forProperty("user"), inits.get("user")) : null;
+        this.user = inits.isInitialized("user") ? new com.ptfinder.ptfinderback.domain.user.data.QUserEntity(forProperty("user")) : null;
     }
 
 }

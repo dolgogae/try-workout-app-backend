@@ -7,7 +7,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum TrainerType {
 
-    GYM("GYM", "헬스 트레이너");
+    HEALTH("HEALTH", "헬스 트레이너"),
+    PILATES("PILATES", "필라테스");
 
     private final String key;
     private final String title;

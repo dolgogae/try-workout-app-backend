@@ -13,6 +13,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -39,8 +40,8 @@ public class UserEntity {
     @Enumerated(value = EnumType.STRING)
     private UserRole userRole;
 
-    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Trainer trainer;
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Trainer> trainers;
 
     @Column(name = "ACCOUNT_TYPE")
     @Enumerated(value = EnumType.STRING)

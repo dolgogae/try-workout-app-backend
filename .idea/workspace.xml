@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/reservation/data/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/TrainerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/validator/PhoneNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/validator/PhoneNumberValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/aop/AuthAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/aop/AuthCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
@@ -19,36 +13,69 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/controller/FeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/controller/FeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/data/Fee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/data/Fee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/service/FeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/service/FeeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/controller/TrainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/controller/TrainerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer$TrainerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer$TrainerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto$TrainerCreateDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto$TrainerCreateDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/global/error/ErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/global/error/ErrorCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/data/QUserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/data/QUserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/data/UserEntity$UserEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/data/UserEntity$UserEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/data/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/data/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto$UserCreateDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto$UserCreateDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserDto$UserDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserDto$UserDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/repository/UserJpaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/repository/UserJpaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/global/result/ResultCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/global/result/ResultCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/security/jwt/JwtVerificationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/security/jwt/JwtVerificationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrainerServiceV1.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/security/SecurityConfig$CustomFilterConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/security/SecurityConfig$CustomFilterConfigurer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ptfinder/ptfinderback/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/PtFinderBackApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/global/config/AES128ConfigTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/trainer/data/QTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/user/data/QUserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/ptfinder/ptfinderback/domain/user/data/QUserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.ptfinder.ptfinderback.domain.fee.service.FeeServiceV1Test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.ptfinder.ptfinderback.domain.fee.service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.ptfinder.ptfinderback.domain.fee.service.FeeServiceV1Test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrainerController.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/GymServiceV1Test.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/controller/FeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/data/Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/data/Fee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/reservation/data/Reservation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/TrainerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/TrainerType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/controller/TrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/controller/TrainerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/data/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/dto/TrainerCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/data/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/data/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/UserCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/service/UserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/service/UserProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/error/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/error/ErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/result/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/global/result/ResultCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/security/jwt/JwtVerificationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/security/jwt/JwtVerificationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/repository/UserJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ptfinder/ptfinderback/domain/user/repository/UserJpaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,76 +249,70 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="GymServiceV1Test.getGymTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="pt-finder-back [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test.getGymTest&quot;" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="GymServiceV1Test.getKNearestLocations" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="pt-finder-back [compileQuerydslJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ptfinder.ptfinderback.domain.gym.service.GymServiceV1Test.getKNearestLocations&quot;" />
+            <option value="compileQuerydslJava" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceImplV1Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="pt-finder-back [compileQuerydsl]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ptfinder.ptfinderback.domain.user.service.UserServiceImplV1Test&quot;" />
+            <option value="compileQuerydsl" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -330,19 +351,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.FeeServiceV1Test.createFeeTest" />
+      <item itemvalue="Gradle.pt-finder-back [clean]" />
+      <item itemvalue="Gradle.pt-finder-back [compileQuerydslJava]" />
+      <item itemvalue="Gradle.pt-finder-back [compileQuerydsl]" />
       <item itemvalue="Gradle.GymServiceV1Test" />
-      <item itemvalue="Gradle.GymServiceV1Test.getKNearestLocations" />
-      <item itemvalue="Gradle.GymServiceV1Test.getGymTest" />
-      <item itemvalue="Gradle.UserServiceImplV1Test" />
       <item itemvalue="Spring Boot.PtFinderBackApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.pt-finder-back [compileQuerydsl]" />
+        <item itemvalue="Gradle.pt-finder-back [clean]" />
+        <item itemvalue="Gradle.pt-finder-back [compileQuerydslJava]" />
         <item itemvalue="Gradle.FeeServiceV1Test.createFeeTest" />
         <item itemvalue="Gradle.GymServiceV1Test" />
-        <item itemvalue="Gradle.GymServiceV1Test.getKNearestLocations" />
-        <item itemvalue="Gradle.GymServiceV1Test.getGymTest" />
-        <item itemvalue="Gradle.UserServiceImplV1Test" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +380,7 @@
       <workItem from="1699080049535" duration="317000" />
       <workItem from="1699080379802" duration="44026000" />
       <workItem from="1700979041200" duration="923000" />
-      <workItem from="1701003581276" duration="44117000" />
+      <workItem from="1701003581276" duration="56847000" />
     </task>
     <servers />
   </component>
@@ -390,7 +411,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pt_finder_back$PtFinderBackApplication.ic" NAME="PtFinderBackApplication Coverage Results" MODIFIED="1701430037204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/pt_finder_back$PtFinderBackApplication.ic" NAME="PtFinderBackApplication Coverage Results" MODIFIED="1702205089475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/pt_finder_back$GymServiceV1Test_getKNearestLocations.ic" NAME="GymServiceV1Test.getKNearestLocations Coverage Results" MODIFIED="1701347124618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

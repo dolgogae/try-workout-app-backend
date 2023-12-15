@@ -29,7 +29,7 @@ public class Trainer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID", unique = true)
     private UserEntity user;
 
@@ -78,7 +78,7 @@ public class Trainer {
                 .build();
     }
 
-    public Trainer updateGym(Gym gym){
+    public Trainer registerGym(Gym gym){
         this.gym = gym;
         return this;
     }

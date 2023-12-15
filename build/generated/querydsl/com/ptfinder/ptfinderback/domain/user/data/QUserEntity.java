@@ -18,8 +18,6 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
 
     private static final long serialVersionUID = 797687027L;
 
-    private static final PathInits INITS = PathInits.DIRECT2;
-
     public static final QUserEntity userEntity = new QUserEntity("userEntity");
 
     public final StringPath accessToken = createString("accessToken");
@@ -34,9 +32,11 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
 
     public final StringPath password = createString("password");
 
+    public final StringPath phoneNumber = createString("phoneNumber");
+
     public final StringPath refreshToken = createString("refreshToken");
 
-    public final com.ptfinder.ptfinderback.domain.trainer.data.QTrainer trainer;
+    public final ListPath<com.ptfinder.ptfinderback.domain.trainer.data.Trainer, com.ptfinder.ptfinderback.domain.trainer.data.QTrainer> trainers = this.<com.ptfinder.ptfinderback.domain.trainer.data.Trainer, com.ptfinder.ptfinderback.domain.trainer.data.QTrainer>createList("trainers", com.ptfinder.ptfinderback.domain.trainer.data.Trainer.class, com.ptfinder.ptfinderback.domain.trainer.data.QTrainer.class, PathInits.DIRECT2);
 
     public final DateTimePath<java.time.LocalDateTime> updatedAt = createDateTime("updatedAt", java.time.LocalDateTime.class);
 
@@ -45,24 +45,15 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
     public final EnumPath<com.ptfinder.ptfinderback.domain.user.UserRole> userRole = createEnum("userRole", com.ptfinder.ptfinderback.domain.user.UserRole.class);
 
     public QUserEntity(String variable) {
-        this(UserEntity.class, forVariable(variable), INITS);
+        super(UserEntity.class, forVariable(variable));
     }
 
     public QUserEntity(Path<? extends UserEntity> path) {
-        this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
+        super(path.getType(), path.getMetadata());
     }
 
     public QUserEntity(PathMetadata metadata) {
-        this(metadata, PathInits.getFor(metadata, INITS));
-    }
-
-    public QUserEntity(PathMetadata metadata, PathInits inits) {
-        this(UserEntity.class, metadata, inits);
-    }
-
-    public QUserEntity(Class<? extends UserEntity> type, PathMetadata metadata, PathInits inits) {
-        super(type, metadata, inits);
-        this.trainer = inits.isInitialized("trainer") ? new com.ptfinder.ptfinderback.domain.trainer.data.QTrainer(forProperty("trainer"), inits.get("trainer")) : null;
+        super(UserEntity.class, metadata);
     }
 
 }
