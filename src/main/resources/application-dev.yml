@@ -6,7 +6,7 @@ spring:
       on-profile: dev
   datasource:
     hikari:
-      maximum-pool-size: 20
+      maximum-pool-size: 40
     url: jdbc:mysql://localhost:3399/pt_finder?useSSL=false&allowPublicKeyRetrieval=true
     username: pt-user
     password: dhtlgns731!
@@ -51,3 +51,11 @@ jwt:
 aes:
   secret-key: 6dee66ecc416d128993ccb10534dcba7
 
+naver:
+  client:
+    search:
+      id: kUNGRnUVthz3QkYRFLVo
+      secret: 0E6wPObE5n
+  url:
+    search:
+      local: https://openapi.naver.com/v1/search/local.json

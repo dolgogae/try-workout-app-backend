@@ -1,9 +1,10 @@
 package com.ptfinder.ptfinderback.domain.user.service;
 
-import com.ptfinder.ptfinderback.domain.user.data.UserEntity;
-import com.ptfinder.ptfinderback.domain.user.dto.UserCreateDto;
-import com.ptfinder.ptfinderback.domain.user.dto.UserDto;
-import com.ptfinder.ptfinderback.domain.user.repository.UserJpaRepository;
+import com.tryworkout.backend.domain.user.data.UserEntity;
+import com.tryworkout.backend.domain.user.dto.UserCreateDto;
+import com.tryworkout.backend.domain.user.dto.UserDto;
+import com.tryworkout.backend.domain.user.repository.UserJpaRepository;
+import com.tryworkout.backend.domain.user.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Transactional
 class UserServiceImplV1Test {
 
-    @Autowired UserService userService;
+    @Autowired
+    UserService userService;
     @Autowired
     UserJpaRepository userJpaRepository;
 

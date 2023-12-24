@@ -1,5 +1,6 @@
 package com.ptfinder.ptfinderback.global.config;
 
+import com.tryworkout.backend.global.config.AES128Config;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
