@@ -2,6 +2,7 @@ package com.tryworkout.backend.domain.trainer.data;
 
 import com.tryworkout.backend.domain.gym.data.Gym;
 import com.tryworkout.backend.domain.fee.data.Fee;
+import com.tryworkout.backend.domain.filestorage.data.TrainerImage;
 import com.tryworkout.backend.domain.trainer.TrainerType;
 import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
 import com.tryworkout.backend.domain.user.data.UserEntity;
@@ -54,6 +55,9 @@ public class Trainer {
     @Column(name = "TRAINER_TYPE")
     @Enumerated(value = EnumType.STRING)
     private TrainerType trainerType;
+
+    @OneToMany
+    private List<TrainerImage> trainerImages = new ArrayList<>();
 
     @CreatedDate
     private LocalDateTime createdAt;
