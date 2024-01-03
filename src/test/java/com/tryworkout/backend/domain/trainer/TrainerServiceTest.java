@@ -1,4 +1,4 @@
-package com.ptfinder.ptfinderback.domain.trainer.service;
+package com.tryworkout.backend.domain.trainer;
 
 import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
 import com.tryworkout.backend.domain.trainer.dto.TrainerDto;
@@ -11,10 +11,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-class TrainerImageCreateRequestDtoServiceV1Test {
+class TrainerServiceTest {
 
     @Autowired
     TrainerService trainerService;

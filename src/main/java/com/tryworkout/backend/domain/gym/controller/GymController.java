@@ -28,7 +28,7 @@ public class GymController {
     private final NaverSearchClient naverSearchClient;
 
     @PostMapping("/list")
-    public ResponseEntity<ResultResponse> getGym (
+    public ResponseEntity<ResultResponse> getGymFromNaverApi (
             @RequestBody String query
     ){
         SearchLocalReq searchLocalReq = SearchLocalReq.builder()

@@ -1,4 +1,4 @@
-package com.ptfinder.ptfinderback.domain.gym.service;
+package com.tryworkout.backend.domain.service;
 
 import com.tryworkout.backend.domain.gym.dto.GymCreateDto;
 import com.tryworkout.backend.domain.gym.dto.GymDto;

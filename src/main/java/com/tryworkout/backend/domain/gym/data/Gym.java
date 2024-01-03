@@ -44,7 +44,7 @@ public class Gym {
     @Column(name = "PARKING_FEE")
     private Integer parkingFee;
 
-    @Column(name = "WEAR")
+    @Column(name = "WEAR_YN")
     private Boolean wearYn;
 
     @Column(name = "WEAR_FEE")
@@ -53,7 +53,7 @@ public class Gym {
     @Column(name = "LOCKER_YN")
     private Boolean lockerYn;
 
-    @Column(name = "lockerFee")
+    @Column(name = "LOCKER_FEE")
     private Integer lockerFee;
 
     @Column(name = "BUSINESS_HOURS_WEEK")
@@ -79,9 +79,11 @@ public class Gym {
     private List<Trainer> trainers = new ArrayList<>();
 
     @CreatedDate
+    @Column(name = "CREATED_AT")
     private LocalDateTime createdAt;
 
     @LastModifiedDate
+    @Column(name = "UPDATED_AT")
     private LocalDateTime updatedAt;
 
     @Builder

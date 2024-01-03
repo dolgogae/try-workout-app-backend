@@ -34,6 +34,8 @@ public class QTrainer extends EntityPathBase<Trainer> {
 
     public final ListPath<String, StringPath> qualifications = this.<String, StringPath>createList("qualifications", String.class, StringPath.class, PathInits.DIRECT2);
 
+    public final ListPath<com.tryworkout.backend.domain.filestorage.data.TrainerImage, com.tryworkout.backend.domain.filestorage.data.QTrainerImage> trainerImages = this.<com.tryworkout.backend.domain.filestorage.data.TrainerImage, com.tryworkout.backend.domain.filestorage.data.QTrainerImage>createList("trainerImages", com.tryworkout.backend.domain.filestorage.data.TrainerImage.class, com.tryworkout.backend.domain.filestorage.data.QTrainerImage.class, PathInits.DIRECT2);
+
     public final EnumPath<com.tryworkout.backend.domain.trainer.TrainerType> trainerType = createEnum("trainerType", com.tryworkout.backend.domain.trainer.TrainerType.class);
 
     public final DateTimePath<java.time.LocalDateTime> updatedAt = createDateTime("updatedAt", java.time.LocalDateTime.class);

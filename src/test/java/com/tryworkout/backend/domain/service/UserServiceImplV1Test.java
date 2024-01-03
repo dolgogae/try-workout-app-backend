@@ -1,4 +1,4 @@
-package com.ptfinder.ptfinderback.domain.user.service;
+package com.tryworkout.backend.domain.service;
 
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import com.tryworkout.backend.domain.user.dto.UserCreateDto;

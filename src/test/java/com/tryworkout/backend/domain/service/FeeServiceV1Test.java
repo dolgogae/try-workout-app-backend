@@ -1,4 +1,4 @@
-package com.ptfinder.ptfinderback.domain.fee.service;
+package com.tryworkout.backend.domain.service;
 
 import com.tryworkout.backend.domain.fee.dto.FeeCreateDto;
 import com.tryworkout.backend.domain.fee.dto.FeeDto;

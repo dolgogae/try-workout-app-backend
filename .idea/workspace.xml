@@ -5,17 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/controller/TrainerImageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/data/TrainerImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/dto/ImageCreateRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/dto/TrainerImageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/repository/TrainerImageJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/service/FileStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/fee/data/Fee$FeeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/fee/data/Fee$FeeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/fee/data/Fee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/fee/data/Fee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/gym/controller/GymController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/gym/controller/GymController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/gym/data/Gym$GymBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/gym/data/Gym$GymBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/gym/data/Gym.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/gym/data/Gym.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/controller/TrainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/controller/TrainerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/QTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/QTrainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer$TrainerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer$TrainerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/global/result/ResultCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/global/result/ResultCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/trainer/data/QTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/trainer/data/QTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/NaverSearchClient$1.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/NaverSearchClient.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/fee/data/Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/fee/data/Fee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/data/TrainerImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/data/TrainerImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/dto/ImageCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/dto/ImageCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/service/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/service/FileStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/gym/controller/GymController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/gym/controller/GymController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/gym/data/Gym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/gym/data/Gym.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/controller/TrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/controller/TrainerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/data/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/data/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/result/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/result/ResultCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerImageCreateRequestDtoServiceV1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tryworkout/backend/domain/BackendApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tryworkout/backend/domain/service/FeeServiceV1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tryworkout/backend/domain/service/GymServiceV1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/trainer/service/TrainerImageCreateRequestDtoServiceV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tryworkout/backend/domain/trainer/TrainerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tryworkout/backend/domain/service/UserServiceImplV1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ptfinder/ptfinderback/global/config/AES128ConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/tryworkout/backend/domain/config/AES128ConfigTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +68,17 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -52,8 +92,8 @@
         <option value="Interface" />
         <option value="package-info" />
         <option value="AnnotationType" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -105,11 +145,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tryworkout.backend.domain.trainer.service" />
       <recent name="com.tryworkout.backend.domain.naverapi.service" />
       <recent name="com.ptfinder.ptfinderback.domain.fee.service" />
       <recent name="com.ptfinder.ptfinderback.domain.gym.service" />
       <recent name="com.ptfinder.ptfinderback.domain.trainer.service" />
-      <recent name="com.ptfinder.ptfinderback.domain.user.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -119,7 +159,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.NaverSearchClientTest.searchLocalTest (1)">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="FeeServiceV1Test.createFeeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -300,7 +340,7 @@
       <workItem from="1699080379802" duration="44026000" />
       <workItem from="1700979041200" duration="923000" />
       <workItem from="1701003581276" duration="59646000" />
-      <workItem from="1702713868326" duration="12072000" />
+      <workItem from="1702713868326" duration="20009000" />
     </task>
     <servers />
   </component>
@@ -344,5 +384,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pt_finder_back$PtFinderBackApplication.ic" NAME="PtFinderBackApplication Coverage Results" MODIFIED="1702205089475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/pt_finder_back$GymServiceV1Test_getKNearestLocations.ic" NAME="GymServiceV1Test.getKNearestLocations Coverage Results" MODIFIED="1701347124618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/backend$BackendApplication.ic" NAME="BackendApplication Coverage Results" MODIFIED="1704274432796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

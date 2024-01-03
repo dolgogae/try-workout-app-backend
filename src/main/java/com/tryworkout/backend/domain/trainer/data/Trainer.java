@@ -56,7 +56,11 @@ public class Trainer {
     @Enumerated(value = EnumType.STRING)
     private TrainerType trainerType;
 
-    @OneToMany
+    @OneToMany(mappedBy = "trainer",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
     private List<TrainerImage> trainerImages = new ArrayList<>();
 
     @CreatedDate

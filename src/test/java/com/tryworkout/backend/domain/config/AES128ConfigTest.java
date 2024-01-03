@@ -1,4 +1,4 @@
-package com.ptfinder.ptfinderback.global.config;
+package com.tryworkout.backend.domain.config;
 
 import com.tryworkout.backend.global.config.AES128Config;
 import org.junit.jupiter.api.DisplayName;

@@ -13,16 +13,22 @@ import com.tryworkout.backend.global.result.ResultResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.nio.file.Path;
 
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/trainer")
 public class TrainerController {
+
+    @Value("${image.root.path}")
+    private String fileRootPath;
 
     private final TrainerService trainerService;
     private final ModelMapper mapper;
@@ -57,10 +63,11 @@ public class TrainerController {
     @PreAuthorize("hasRole('ROLE_TRAINER')")
     public ResponseEntity<ResultResponse> createTrainerImage(
             @PathVariable Long trainerId,
-            @RequestBody ImageCreateRequestDto imageCreateRequestDto
+            ImageCreateRequestDto imageCreateRequestDto
     ){
         imageCreateRequestDto.setId(trainerId);
-        TrainerImageResponse trainerImage = fileStorageService.createTrainerImage(imageCreateRequestDto);
+        Path filePath = Path.of(fileRootPath + "/trainers");
+        TrainerImageResponse trainerImage = fileStorageService.createTrainerImage(filePath, imageCreateRequestDto);
 
         ResultResponse result = ResultResponse.of(ResultCode.IMAGE_UPLOAD_SUCCESS , trainerImage);
         return new ResponseEntity<>(result, HttpStatus.OK);

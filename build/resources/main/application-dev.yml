@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: validate # or create-drop, validate, none (choose appropriate)
+      ddl-auto: update # or create-drop, validate, none (choose appropriate)
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
@@ -59,3 +59,6 @@ naver:
   url:
     search:
       local: https://openapi.naver.com/v1/search/local.json
+image:
+  trainer:
+    path: /Users/sihun/images/
