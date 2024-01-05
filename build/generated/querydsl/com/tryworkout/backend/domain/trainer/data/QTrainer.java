@@ -32,7 +32,7 @@ public class QTrainer extends EntityPathBase<Trainer> {
 
     public final StringPath introduction = createString("introduction");
 
-    public final ListPath<String, StringPath> qualifications = this.<String, StringPath>createList("qualifications", String.class, StringPath.class, PathInits.DIRECT2);
+    public final ListPath<com.tryworkout.backend.domain.filestorage.data.Qualification, com.tryworkout.backend.domain.filestorage.data.QQualification> qualifications = this.<com.tryworkout.backend.domain.filestorage.data.Qualification, com.tryworkout.backend.domain.filestorage.data.QQualification>createList("qualifications", com.tryworkout.backend.domain.filestorage.data.Qualification.class, com.tryworkout.backend.domain.filestorage.data.QQualification.class, PathInits.DIRECT2);
 
     public final ListPath<com.tryworkout.backend.domain.filestorage.data.TrainerImage, com.tryworkout.backend.domain.filestorage.data.QTrainerImage> trainerImages = this.<com.tryworkout.backend.domain.filestorage.data.TrainerImage, com.tryworkout.backend.domain.filestorage.data.QTrainerImage>createList("trainerImages", com.tryworkout.backend.domain.filestorage.data.TrainerImage.class, com.tryworkout.backend.domain.filestorage.data.QTrainerImage.class, PathInits.DIRECT2);
 

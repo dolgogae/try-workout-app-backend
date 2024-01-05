@@ -12,4 +12,5 @@ public class ImageCreateDto<T> {
     private T entity;
     private String url;
     private String explanation;
+    private String name;
 }

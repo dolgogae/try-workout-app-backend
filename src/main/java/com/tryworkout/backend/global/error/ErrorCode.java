@@ -41,7 +41,10 @@ public enum ErrorCode {
     GYM_NOT_FOUND(400, "G001", "Gym is not exist"),
 
     // FEE
-    FEE_NOT_FOUND(400, "F001", "FEE is not exist");
+    FEE_NOT_FOUND(400, "F001", "FEE is not exist"),
+
+    // IMAGE
+    IMAGE_TYPE_NOT_MATCHING(400, "I001", "Image type is not matching");
 
     private int status;
     private final String code;

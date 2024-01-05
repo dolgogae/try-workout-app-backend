@@ -1,12 +1,15 @@
 package com.tryworkout.backend.domain.trainer.controller;
 
+import com.tryworkout.backend.domain.filestorage.data.Qualification;
+import com.tryworkout.backend.domain.filestorage.data.TrainerImage;
 import com.tryworkout.backend.domain.filestorage.dto.ImageCreateRequestDto;
+import com.tryworkout.backend.domain.filestorage.dto.QualificationResponse;
 import com.tryworkout.backend.domain.filestorage.dto.TrainerImageResponse;
 import com.tryworkout.backend.domain.filestorage.service.FileStorageService;
-import com.tryworkout.backend.domain.trainer.service.TrainerService;
 import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
 import com.tryworkout.backend.domain.trainer.dto.TrainerDto;
 import com.tryworkout.backend.domain.trainer.dto.TrainerResponseDto;
+import com.tryworkout.backend.domain.trainer.service.TrainerService;
 import com.tryworkout.backend.domain.user.service.UserProvider;
 import com.tryworkout.backend.global.result.ResultCode;
 import com.tryworkout.backend.global.result.ResultResponse;
@@ -67,9 +70,27 @@ public class TrainerController {
     ){
         imageCreateRequestDto.setId(trainerId);
         Path filePath = Path.of(fileRootPath + "/trainers");
-        TrainerImageResponse trainerImage = fileStorageService.createTrainerImage(filePath, imageCreateRequestDto);
+        TrainerImageResponse trainerImage = fileStorageService
+                .createImage(filePath, imageCreateRequestDto, TrainerImage.class, TrainerImageResponse.class);
+        trainerImage.setTrainerId(trainerId);
 
         ResultResponse result = ResultResponse.of(ResultCode.IMAGE_UPLOAD_SUCCESS , trainerImage);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+    @PostMapping("/{trainerId}/images/qualification/images")
+    @PreAuthorize("hasRole('ROLE_TRAINER')")
+    public ResponseEntity<ResultResponse> createTrainerQualificationImage(
+            @PathVariable Long trainerId,
+            ImageCreateRequestDto imageCreateRequestDto
+    ){
+        imageCreateRequestDto.setId(trainerId);
+        Path filePath = Path.of(fileRootPath + "/trainers/qualification");
+        QualificationResponse qualificationResponse = fileStorageService
+                .createImage(filePath, imageCreateRequestDto, Qualification.class, QualificationResponse.class);
+        qualificationResponse.setTrainerId(trainerId);
+
+        ResultResponse result = ResultResponse.of(ResultCode.IMAGE_UPLOAD_SUCCESS , qualificationResponse);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }

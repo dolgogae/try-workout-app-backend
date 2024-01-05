@@ -60,5 +60,5 @@ naver:
     search:
       local: https://openapi.naver.com/v1/search/local.json
 image:
-  trainer:
+  root:
     path: /Users/sihun/images/

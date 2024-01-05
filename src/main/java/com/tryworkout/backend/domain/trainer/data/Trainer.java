@@ -3,6 +3,7 @@ package com.tryworkout.backend.domain.trainer.data;
 import com.tryworkout.backend.domain.gym.data.Gym;
 import com.tryworkout.backend.domain.fee.data.Fee;
 import com.tryworkout.backend.domain.filestorage.data.TrainerImage;
+import com.tryworkout.backend.domain.filestorage.data.Qualification;
 import com.tryworkout.backend.domain.trainer.TrainerType;
 import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
 import com.tryworkout.backend.domain.user.data.UserEntity;
@@ -44,9 +45,12 @@ public class Trainer {
     @Column(name = "INTRODUCTION", length = 10000)
     private String introduction;
 
-    @Column(name = "QUALIFICATIONS")
-    @ElementCollection(fetch = FetchType.LAZY)
-    private List<String> qualifications = new ArrayList<>();
+    @OneToMany(mappedBy = "trainer",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Qualification> qualifications = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "GYM_ID")
