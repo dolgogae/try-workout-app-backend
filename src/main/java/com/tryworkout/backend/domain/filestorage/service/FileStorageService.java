@@ -20,6 +20,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Map;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -61,14 +62,13 @@ public class FileStorageService {
     }
 
     private String store(MultipartFile file, Path rootLocation) {
-        String filename = StringUtils.cleanPath(file.getOriginalFilename());
+        String filename = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
         try {
             if (file.isEmpty()) {
-                throw new RuntimeException("Failed to store empty file " + filename);
+                throw new BusinessException(ErrorCode.IMAGE_EMPTY);
             }
             if (filename.contains("..")) {
-                // Security check
-                throw new RuntimeException("Cannot store file with relative path outside current directory " + filename);
+                throw new BusinessException(ErrorCode.IMAGE_NOT_STORE);
             }
             Path destinationFile = rootLocation.resolve(Paths.get(filename)).normalize().toAbsolutePath();
             try (InputStream inputStream = file.getInputStream()) {
@@ -76,7 +76,7 @@ public class FileStorageService {
             }
             return destinationFile.toString();
         } catch (IOException e) {
-            throw new RuntimeException("Failed to store file " + filename, e);
+            throw new BusinessException(ErrorCode.IMAGE_NOT_STORE);
         }
     }
 }
