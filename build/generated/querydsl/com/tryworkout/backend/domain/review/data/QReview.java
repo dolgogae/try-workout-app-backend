@@ -54,7 +54,7 @@ public class QReview extends EntityPathBase<Review> {
 
     public QReview(Class<? extends Review> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.member = inits.isInitialized("member") ? new com.tryworkout.backend.domain.member.data.QMember(forProperty("member")) : null;
+        this.member = inits.isInitialized("member") ? new com.tryworkout.backend.domain.member.data.QMember(forProperty("member"), inits.get("member")) : null;
         this.trainer = inits.isInitialized("trainer") ? new com.tryworkout.backend.domain.trainer.data.QTrainer(forProperty("trainer"), inits.get("trainer")) : null;
     }
 

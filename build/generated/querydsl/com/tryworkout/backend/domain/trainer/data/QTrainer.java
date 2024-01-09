@@ -34,6 +34,8 @@ public class QTrainer extends EntityPathBase<Trainer> {
 
     public final ListPath<com.tryworkout.backend.domain.filestorage.data.Qualification, com.tryworkout.backend.domain.filestorage.data.QQualification> qualifications = this.<com.tryworkout.backend.domain.filestorage.data.Qualification, com.tryworkout.backend.domain.filestorage.data.QQualification>createList("qualifications", com.tryworkout.backend.domain.filestorage.data.Qualification.class, com.tryworkout.backend.domain.filestorage.data.QQualification.class, PathInits.DIRECT2);
 
+    public final ListPath<com.tryworkout.backend.domain.reservation.data.Reservation, com.tryworkout.backend.domain.reservation.data.QReservation> reservations = this.<com.tryworkout.backend.domain.reservation.data.Reservation, com.tryworkout.backend.domain.reservation.data.QReservation>createList("reservations", com.tryworkout.backend.domain.reservation.data.Reservation.class, com.tryworkout.backend.domain.reservation.data.QReservation.class, PathInits.DIRECT2);
+
     public final ListPath<com.tryworkout.backend.domain.filestorage.data.TrainerImage, com.tryworkout.backend.domain.filestorage.data.QTrainerImage> trainerImages = this.<com.tryworkout.backend.domain.filestorage.data.TrainerImage, com.tryworkout.backend.domain.filestorage.data.QTrainerImage>createList("trainerImages", com.tryworkout.backend.domain.filestorage.data.TrainerImage.class, com.tryworkout.backend.domain.filestorage.data.QTrainerImage.class, PathInits.DIRECT2);
 
     public final EnumPath<com.tryworkout.backend.domain.trainer.TrainerType> trainerType = createEnum("trainerType", com.tryworkout.backend.domain.trainer.TrainerType.class);
@@ -61,7 +63,7 @@ public class QTrainer extends EntityPathBase<Trainer> {
     public QTrainer(Class<? extends Trainer> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
         this.gym = inits.isInitialized("gym") ? new com.tryworkout.backend.domain.gym.data.QGym(forProperty("gym")) : null;
-        this.user = inits.isInitialized("user") ? new com.tryworkout.backend.domain.user.data.QUserEntity(forProperty("user")) : null;
+        this.user = inits.isInitialized("user") ? new com.tryworkout.backend.domain.user.data.QUserEntity(forProperty("user"), inits.get("user")) : null;
     }
 
 }

@@ -5,8 +5,109 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/dto/MemberCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/dto/MemberDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/repository/MemberJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/service/MemberServiceV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/data/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/tryworkout/backend/unit/domain/member/service/MemberServiceV1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/service/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/service/FileStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/filestorage/service/FileStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/filestorage/service/FileStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/member/data/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/member/data/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/member/data/QMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/member/data/QMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/review/data/QReview.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/review/data/QReview.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/controller/TrainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/controller/TrainerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/QTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/QTrainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer$TrainerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer$TrainerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/data/Trainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/service/TrainerServiceV1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/trainer/service/TrainerServiceV1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/user/data/QUserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/user/data/QUserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/user/data/UserEntity$UserEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/user/data/UserEntity$UserEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/user/data/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/domain/user/data/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/global/error/ErrorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/tryworkout/backend/global/error/ErrorCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/BackendApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/fee/service/FeeServiceV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/gym/service/GymServiceV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/trainer/service/TrainerServiceV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/domain/user/service/UserServiceImplV1Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ptfinder/ptfinderback/global/config/AES128ConfigTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/member/data/QMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/member/data/QMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/review/data/QReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/review/data/QReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/trainer/data/QTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/trainer/data/QTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/user/data/QUserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/tryworkout/backend/domain/user/data/QUserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.tryworkout.backend.domain.naverapi.service.NaverSearchClientTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.tryworkout.backend.domain.naverapi.service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.tryworkout.backend.domain.naverapi.service.NaverSearchClientTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AES128Config.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AuthAspect.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AuthenticationNotFoundException.class.uniqueId32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BusinessException.class.uniqueId9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CustomAuthenticationProvider.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CustomAuthorityUtils.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CustomUserDetails.class.uniqueId18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CustomUserDetailsService.class.uniqueId46" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ErrorCode.class.uniqueId47" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ErrorResponse$FieldError.class.uniqueId13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ErrorResponse.class.uniqueId27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Fee$FeeBuilder.class.uniqueId11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Fee.class.uniqueId51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FeeJpaRepository.class.uniqueId19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FeeServiceV1.class.uniqueId41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FileStorageService.class.uniqueId17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GlobalExceptionHandler.class.uniqueId15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Gym$GymBuilder.class.uniqueId42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Gym.class.uniqueId45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GymJpaRepository.class.uniqueId22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GymServiceV1.class.uniqueId20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ImageCreateDto$ImageCreateDtoBuilder.class.uniqueId48" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ImageCreateDto.class.uniqueId28" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/JwtAuthenticationFilter.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/JwtTokenProvider.class.uniqueId21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/JwtVerificationFilter.class.uniqueId43" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Member.class.uniqueId49" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Member.class.uniqueId49" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QFee.class.uniqueId10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QGym.class.uniqueId23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QMember.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QReview.class.uniqueId50" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QReview.class.uniqueId50" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QTrainer.class.uniqueId40" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QTrainerImage.class.uniqueId36" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/QUserEntity.class.uniqueId16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Trainer$TrainerBuilder.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Trainer.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrainerController.class.uniqueId33" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrainerImage$TrainerImageBuilder.class.uniqueId26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrainerImage.class.uniqueId44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrainerJpaRepository.class.uniqueId25" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrainerServiceV1.class.uniqueId12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserEntity$UserEntityBuilder.class.uniqueId37" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserEntity.class.uniqueId35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserJpaRepository.class.uniqueId52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserProvider.class.uniqueId34" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserServiceImplV1.class.uniqueId24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/NaverSearchClientTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/data/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/member/data/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/data/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/data/Trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/service/TrainerServiceV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/service/TrainerServiceV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/user/data/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/user/data/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/result/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/result/ResultCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +153,8 @@
         <option value="Enum" />
         <option value="package-info" />
         <option value="AnnotationType" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -109,11 +210,11 @@
       <recent name="com.tryworkout.backend.domain.filestorage.data" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tryworkout.backend.unit.domain.member.service" />
       <recent name="com.tryworkout.backend.domain.trainer.service" />
       <recent name="com.tryworkout.backend.domain.naverapi.service" />
       <recent name="com.ptfinder.ptfinderback.domain.fee.service" />
       <recent name="com.ptfinder.ptfinderback.domain.gym.service" />
-      <recent name="com.ptfinder.ptfinderback.domain.trainer.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -123,8 +224,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
-    <configuration name="FeeServiceV1Test.createFeeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.MemberServiceV1Test.creatMemberTest">
+    <configuration name="MemberServiceV1Test.creatMemberTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +238,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ptfinder.ptfinderback.domain.fee.service.FeeServiceV1Test.createFeeTest&quot;" />
+            <option value="&quot;com.tryworkout.backend.unit.domain.member.service.MemberServiceV1Test.creatMemberTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -273,8 +374,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.MemberServiceV1Test.creatMemberTest" />
       <item itemvalue="Gradle.NaverSearchClientTest.searchLocalTest (1)" />
-      <item itemvalue="Gradle.FeeServiceV1Test.createFeeTest" />
       <item itemvalue="Gradle.pt-finder-back [clean]" />
       <item itemvalue="Gradle.pt-finder-back [compileQuerydslJava]" />
       <item itemvalue="Gradle.pt-finder-back [compileQuerydsl]" />
@@ -283,11 +384,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MemberServiceV1Test.creatMemberTest" />
         <item itemvalue="Gradle.NaverSearchClientTest.searchLocalTest (1)" />
         <item itemvalue="Gradle.pt-finder-back [compileQuerydsl]" />
         <item itemvalue="Gradle.pt-finder-back [clean]" />
         <item itemvalue="Gradle.pt-finder-back [compileQuerydslJava]" />
-        <item itemvalue="Gradle.FeeServiceV1Test.createFeeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +406,7 @@
       <workItem from="1699080379802" duration="44026000" />
       <workItem from="1700979041200" duration="923000" />
       <workItem from="1701003581276" duration="59646000" />
-      <workItem from="1702713868326" duration="29517000" />
+      <workItem from="1702713868326" duration="34354000" />
     </task>
     <servers />
   </component>

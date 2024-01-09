@@ -1,5 +1,6 @@
 package com.tryworkout.backend.domain.user.data;
 
+import com.tryworkout.backend.domain.member.data.Member;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
 import com.tryworkout.backend.domain.user.AccountType;
 import com.tryworkout.backend.domain.user.UserRole;
@@ -42,6 +43,9 @@ public class UserEntity {
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Trainer> trainers;
+
+    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Member member;
 
     @Column(name = "ACCOUNT_TYPE")
     @Enumerated(value = EnumType.STRING)

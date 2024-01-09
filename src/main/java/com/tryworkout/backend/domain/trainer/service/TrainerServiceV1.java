@@ -3,10 +3,9 @@ package com.tryworkout.backend.domain.trainer.service;
 import com.tryworkout.backend.domain.gym.data.Gym;
 import com.tryworkout.backend.domain.gym.repository.GymJpaRepository;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
-import com.tryworkout.backend.domain.trainer.repository.TrainerJpaRepository;
-import com.tryworkout.backend.domain.gym.service.GymService;
 import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
 import com.tryworkout.backend.domain.trainer.dto.TrainerDto;
+import com.tryworkout.backend.domain.trainer.repository.TrainerJpaRepository;
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import com.tryworkout.backend.domain.user.repository.UserJpaRepository;
 import com.tryworkout.backend.global.error.ErrorCode;
@@ -25,7 +24,6 @@ public class TrainerServiceV1 implements TrainerService{
     private final TrainerJpaRepository trainerJpaRepository;
     private final UserJpaRepository userJpaRepository;
     private final GymJpaRepository gymJpaRepository;
-    private final GymService gymService;
     private final ModelMapper mapper;
 
     @Override

@@ -22,6 +22,9 @@ public enum ResultCode {
     TRAINER_UPDATE_SUCCESS(200, "TR002", "트레이너 정보 업데이트에 성공했습니다."),
     TRAINER_FEE_CREATED(200, "TR003", "트레이너 요금 정보를 업데이트 했습니다"),
 
+    // MEMBER
+    MEMBER_CREATE_SUCCESS(201, "M001", "멤버 생성을 성공했습니다."),
+
     // GYM
     GET_GYM_SUCCESS(200, "G001", "체육관을 가져오는데 성공했습니다."),
     GET_NEAREST_GYM_SUCCESS(200, "G002", "가까운 체육관 갯수를 가져오는데 성공했습니다."),

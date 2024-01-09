@@ -1,6 +1,9 @@
 package com.tryworkout.backend.domain.member.data;
 
+import com.tryworkout.backend.domain.reservation.data.Reservation;
 import com.tryworkout.backend.domain.review.data.Review;
+import com.tryworkout.backend.domain.user.data.UserEntity;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -24,6 +27,13 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID", unique = true)
+    private UserEntity user;
+
+    @Column(name = "EXERCISE_PERIOD_YEAR")
+    private Integer exercisePeriodYear;
+
     @OneToMany(mappedBy = "member",
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
@@ -31,9 +41,28 @@ public class Member {
     )
     private List<Review> reviews = new ArrayList<>();
 
+    @OneToMany(mappedBy = "member",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private List<Reservation> reservations = new ArrayList<>();
+
     @CreatedDate
     private LocalDateTime createdAt;
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @Builder
+    private Member(UserEntity user, Integer exercisePeriodYear) {
+        this.user = user;
+        this.exercisePeriodYear = exercisePeriodYear;
+    }
+    public static Member create(UserEntity user, Integer exercisePeriodYear){
+        return Member.builder()
+                .user(user)
+                .exercisePeriodYear(exercisePeriodYear)
+                .build();
+    }
 }

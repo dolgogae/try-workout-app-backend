@@ -18,6 +18,8 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
 
     private static final long serialVersionUID = 812083072L;
 
+    private static final PathInits INITS = PathInits.DIRECT2;
+
     public static final QUserEntity userEntity = new QUserEntity("userEntity");
 
     public final StringPath accessToken = createString("accessToken");
@@ -29,6 +31,8 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
     public final StringPath email = createString("email");
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
+
+    public final com.tryworkout.backend.domain.member.data.QMember member;
 
     public final StringPath password = createString("password");
 
@@ -45,15 +49,24 @@ public class QUserEntity extends EntityPathBase<UserEntity> {
     public final EnumPath<com.tryworkout.backend.domain.user.UserRole> userRole = createEnum("userRole", com.tryworkout.backend.domain.user.UserRole.class);
 
     public QUserEntity(String variable) {
-        super(UserEntity.class, forVariable(variable));
+        this(UserEntity.class, forVariable(variable), INITS);
     }
 
     public QUserEntity(Path<? extends UserEntity> path) {
-        super(path.getType(), path.getMetadata());
+        this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
     }
 
     public QUserEntity(PathMetadata metadata) {
-        super(UserEntity.class, metadata);
+        this(metadata, PathInits.getFor(metadata, INITS));
+    }
+
+    public QUserEntity(PathMetadata metadata, PathInits inits) {
+        this(UserEntity.class, metadata, inits);
+    }
+
+    public QUserEntity(Class<? extends UserEntity> type, PathMetadata metadata, PathInits inits) {
+        super(type, metadata, inits);
+        this.member = inits.isInitialized("member") ? new com.tryworkout.backend.domain.member.data.QMember(forProperty("member"), inits.get("member")) : null;
     }
 
 }
