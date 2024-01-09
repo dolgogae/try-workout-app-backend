@@ -10,7 +10,6 @@ import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
 import com.tryworkout.backend.domain.trainer.dto.TrainerDto;
 import com.tryworkout.backend.domain.trainer.dto.TrainerResponseDto;
 import com.tryworkout.backend.domain.trainer.service.TrainerService;
-import com.tryworkout.backend.domain.user.service.UserProvider;
 import com.tryworkout.backend.global.result.ResultCode;
 import com.tryworkout.backend.global.result.ResultResponse;
 import lombok.RequiredArgsConstructor;
@@ -35,7 +34,6 @@ public class TrainerController {
 
     private final TrainerService trainerService;
     private final ModelMapper mapper;
-    private final UserProvider userProvider;
     private final FileStorageService fileStorageService;
 
     @PostMapping

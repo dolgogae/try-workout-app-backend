@@ -2,6 +2,7 @@ package com.tryworkout.backend.domain.reservation.data;
 
 import com.tryworkout.backend.domain.member.data.Member;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -17,7 +18,6 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 @Entity
 public class Reservation {
-
 
     @Id
     @Column(name = "RESERVATION_ID")
@@ -41,4 +41,18 @@ public class Reservation {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
+    @Builder
+    private Reservation(Member member, Trainer trainer, LocalDateTime reservationTime) {
+        this.member = member;
+        this.trainer = trainer;
+        this.reservationTime = reservationTime;
+    }
+
+    public static Reservation create(Member member, Trainer trainer, LocalDateTime reservationTime){
+        return Reservation.builder()
+                .member(member)
+                .trainer(trainer)
+                .reservationTime(reservationTime)
+                .build();
+    }
 }

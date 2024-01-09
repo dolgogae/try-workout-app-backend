@@ -34,6 +34,10 @@ public enum ResultCode {
     FEE_UPDATE_SUCCESS(200, "F002", "요금 정보 업데이트를 성공했습니다." ),
     FEE_DELETE_SUCCESS(200, "F003", "요금 삭제를 성공했습니다."),
 
+    // RESERVATION
+    RESERVATION_REGISTER_SUCCESS(201, "R001", "예약을 성공했습니다."),
+    RESERVATION_DELETE_SUCCESS(200, "R002", "예약을 삭제했습니다."),
+
     // IMAGE
     IMAGE_UPLOAD_SUCCESS(200, "I001", "이미지 업로드를 성공했습니다.");
 
