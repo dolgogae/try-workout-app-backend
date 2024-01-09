@@ -7,7 +7,6 @@
     <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/service/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/filestorage/service/FileStorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/error/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/error/ErrorCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +305,7 @@
       <workItem from="1699080379802" duration="44026000" />
       <workItem from="1700979041200" duration="923000" />
       <workItem from="1701003581276" duration="59646000" />
-      <workItem from="1702713868326" duration="28810000" />
+      <workItem from="1702713868326" duration="29517000" />
     </task>
     <servers />
   </component>
