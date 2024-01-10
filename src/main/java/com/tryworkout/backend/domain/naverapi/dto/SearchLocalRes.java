@@ -1,7 +1,6 @@
 package com.tryworkout.backend.domain.naverapi.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +9,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class SearchLocalRes {
     private String lastBuildDate="";
     private int total=1;
@@ -21,7 +19,6 @@ public class SearchLocalRes {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    @Builder
     public static class Item {
         private String title;
         private String link;
