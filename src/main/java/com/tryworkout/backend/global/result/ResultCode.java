@@ -28,6 +28,7 @@ public enum ResultCode {
     // GYM
     GET_GYM_SUCCESS(200, "G001", "체육관을 가져오는데 성공했습니다."),
     GET_NEAREST_GYM_SUCCESS(200, "G002", "가까운 체육관 갯수를 가져오는데 성공했습니다."),
+    GYM_UPDATE_SUCCESS(200, "G03", "체육관 정보를 업데이트 완료했습니다."),
 
     // FEE
     FEE_CREATE_SUCCESS(201, "F001", "요금 정보 생성을 성공했습니다." ),

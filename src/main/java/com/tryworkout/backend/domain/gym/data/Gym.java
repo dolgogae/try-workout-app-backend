@@ -1,6 +1,9 @@
 package com.tryworkout.backend.domain.gym.data;
 
 import com.tryworkout.backend.domain.gym.dto.GymCreateDto;
+import com.tryworkout.backend.domain.gym.dto.GymFeeUpdateDto;
+import com.tryworkout.backend.domain.gym.dto.GymInfoUpdateDto;
+import com.tryworkout.backend.domain.gym.dto.GymOperatingTimeDto;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
 import lombok.Builder;
 import lombok.Getter;
@@ -103,5 +106,27 @@ public class Gym {
                 .mapX(gymCreateDto.getMapX())
                 .mapY(gymCreateDto.getMapY())
                 .build();
+    }
+
+    public Gym updateGymFees(GymFeeUpdateDto gymFeeUpdateDto){
+        this.parkingYn = gymFeeUpdateDto.getParkingYn();
+        this.parkingFee = gymFeeUpdateDto.getParkingFee();
+        this.lockerYn = gymFeeUpdateDto.getLockerYn();
+        this.lockerFee = gymFeeUpdateDto.getLockerFee();
+        this.wearYn = gymFeeUpdateDto.getWearYn();
+        this.wearFee = gymFeeUpdateDto.getWearFee();
+        return this;
+    }
+
+    public Gym updateOperatingTime(GymOperatingTimeDto dto){
+        this.businessHoursWeek = dto.getBusinessHoursWeek();
+        this.businessHoursWeekend = dto.getBusinessHoursWeekend();
+        this.holiday = dto.getHoliday();
+        return this;
+    }
+
+    public Gym updateGymInfo(GymInfoUpdateDto dto){
+        this.information = dto.getInformation();
+        return this;
     }
 }
