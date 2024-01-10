@@ -1,6 +1,5 @@
 package com.tryworkout.backend.domain.fee.controller;
 
-import com.tryworkout.backend.domain.trainer.service.TrainerService;
 import com.tryworkout.backend.domain.fee.dto.DiscountRateUpdateDto;
 import com.tryworkout.backend.domain.fee.dto.FeeCreateDto;
 import com.tryworkout.backend.domain.fee.dto.FeeDto;
@@ -15,13 +14,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/fee")
 @RequiredArgsConstructor
 public class FeeController {
 
     private final FeeService feeService;
-    private final TrainerService trainerService;
     private final ModelMapper mapper;
 
     @PostMapping
@@ -34,6 +34,17 @@ public class FeeController {
 
         ResultResponse result = ResultResponse.of(ResultCode.FEE_CREATE_SUCCESS, feeResponseDto);
         return new ResponseEntity<>(result, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/{tarinerId}")
+    @PreAuthorize("hasRole('ROLE_TRAINER')")
+    public ResponseEntity<ResultResponse> getFees(
+            @PathVariable Long tarinerId
+    ){
+        List<FeeDto> trainerFees = feeService.getTrainerFees(tarinerId);
+
+        ResultResponse result = ResultResponse.of(ResultCode.FEE_READ_SUCCESS, trainerFees);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @PutMapping
