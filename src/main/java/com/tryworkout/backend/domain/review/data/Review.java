@@ -1,7 +1,9 @@
 package com.tryworkout.backend.domain.review.data;
 
 import com.tryworkout.backend.domain.member.data.Member;
+import com.tryworkout.backend.domain.review.dto.ReviewCreateDto;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -26,14 +28,14 @@ public class Review {
     @Column(name = "SCORE")
     private Integer score;
 
-    @Column(name = "CONTENT")
+    @Column(name = "CONTENT", length = 1000)
     private String content;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "TRAINER_ID")
     private Trainer trainer;
 
@@ -42,4 +44,21 @@ public class Review {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @Builder
+    private Review(Integer score, String content, Member member, Trainer trainer) {
+        this.score = score;
+        this.content = content;
+        this.member = member;
+        this.trainer = trainer;
+    }
+
+    public static Review create(ReviewCreateDto dto, Member member, Trainer trainer){
+        return Review.builder()
+                .score(dto.getScore())
+                .content(dto.getContent())
+                .member(member)
+                .trainer(trainer)
+                .build();
+    }
 }

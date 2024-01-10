@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59efd832-366a-42d1-acbf-46f3872cdcca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/controller/ReservationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/dto/ReservationCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/dto/ReservationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/repository/ReservationJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/service/ReservationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/service/ReservationServiceV1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/review/controller/ReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/review/dto/ReviewCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/review/dto/ReviewDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/review/service/ReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/review/service/ReviewServiceV1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/data/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/reservation/data/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/controller/TrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/trainer/controller/TrainerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/review/data/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/domain/review/data/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/result/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tryworkout/backend/global/result/ResultCode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -313,7 +311,7 @@
       <workItem from="1699080379802" duration="44026000" />
       <workItem from="1700979041200" duration="923000" />
       <workItem from="1701003581276" duration="59646000" />
-      <workItem from="1702713868326" duration="39079000" />
+      <workItem from="1702713868326" duration="41728000" />
     </task>
     <servers />
   </component>

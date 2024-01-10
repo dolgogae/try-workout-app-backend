@@ -38,6 +38,10 @@ public enum ResultCode {
     RESERVATION_REGISTER_SUCCESS(201, "R001", "예약을 성공했습니다."),
     RESERVATION_DELETE_SUCCESS(200, "R002", "예약을 삭제했습니다."),
 
+    // REVIEW
+    REVIEW_CREATE_SUCCESS(201, "RV001", "리뷰 등록에 성공했습니다."),
+    REVIEW_DELETE_SUCCESS(200, "RV002", "리뷰 삭제에 성공했습니다."),
+
     // IMAGE
     IMAGE_UPLOAD_SUCCESS(200, "I001", "이미지 업로드를 성공했습니다.");
 
