@@ -14,6 +14,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service @Slf4j
 @RequiredArgsConstructor
 public class FeeServiceV1 implements FeeService{
@@ -49,6 +51,19 @@ public class FeeServiceV1 implements FeeService{
 
         FeeDto result = mapper.map(updatedFee, FeeDto.class);
         result.setTrainerId(updatedFee.getTrainer().getId());
+
+        return result;
+    }
+
+    @Override
+    public List<FeeDto> getTrainerFees(Long trainerId) {
+        List<Fee> feeList = feeJpaRepository.findByTrainer(trainerId);
+
+        List<FeeDto> result = feeList.stream().map(fee -> {
+            FeeDto feeDto = mapper.map(fee, FeeDto.class);
+            feeDto.setTrainerId(fee.getTrainer().getId());
+            return feeDto;
+        }).toList();
 
         return result;
     }

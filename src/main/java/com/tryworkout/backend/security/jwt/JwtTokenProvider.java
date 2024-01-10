@@ -1,6 +1,6 @@
 package com.tryworkout.backend.security.jwt;
 
-import com.tryworkout.backend.domain.auth.TokenDto;
+import com.tryworkout.backend.domain.auth.dto.TokenDto;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.io.Encoders;

@@ -1,6 +1,6 @@
 package com.tryworkout.backend.security;
 
-import com.tryworkout.backend.domain.user.UserRole;
+import com.tryworkout.backend.domain.user.enums.UserRole;
 import com.tryworkout.backend.global.error.ErrorCode;
 import com.tryworkout.backend.global.error.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;

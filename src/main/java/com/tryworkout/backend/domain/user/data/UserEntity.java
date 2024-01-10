@@ -2,8 +2,8 @@ package com.tryworkout.backend.domain.user.data;
 
 import com.tryworkout.backend.domain.member.data.Member;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
-import com.tryworkout.backend.domain.user.AccountType;
-import com.tryworkout.backend.domain.user.UserRole;
+import com.tryworkout.backend.domain.user.enums.AccountType;
+import com.tryworkout.backend.domain.user.enums.UserRole;
 import com.tryworkout.backend.domain.user.dto.UserDto;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,6 +1,6 @@
 package com.tryworkout.backend.domain.user.repository;
 
-import com.tryworkout.backend.domain.user.AccountType;
+import com.tryworkout.backend.domain.user.enums.AccountType;
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

@@ -1,11 +1,14 @@
-package com.tryworkout.backend.domain.auth;
+package com.tryworkout.backend.domain.auth.controller;
 
-import com.tryworkout.backend.domain.user.dto.UserDto;
+import com.tryworkout.backend.domain.auth.dto.TokenDto;
+import com.tryworkout.backend.domain.auth.service.AuthService;
 import com.tryworkout.backend.domain.user.dto.UserCreateDto;
+import com.tryworkout.backend.domain.user.dto.UserDto;
 import com.tryworkout.backend.domain.user.dto.UserResponseDto;
 import com.tryworkout.backend.domain.user.service.UserService;
 import com.tryworkout.backend.global.result.ResultCode;
 import com.tryworkout.backend.global.result.ResultResponse;
+import com.tryworkout.backend.security.jwt.JwtTokenProvider;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -19,6 +22,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @Slf4j
 @RequiredArgsConstructor
@@ -27,7 +32,9 @@ public class AuthController {
 
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
+    private final JwtTokenProvider jwtTokenProvider;
     private final ModelMapper mapper;
+    private final AuthService authService;
 
     @Operation(summary = "회원가입(sign-in)", description = "회원가입을 위한 API")
     @ApiResponses(value = {
@@ -68,5 +75,17 @@ public class AuthController {
         ResultResponse result = ResultResponse.of(ResultCode.LOGIN_SUCCESS, tokenDto);
         return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
     }
+
+    @PatchMapping("/logout")
+    public ResponseEntity logout(HttpServletRequest request) {
+        String encryptedRefreshToken = jwtTokenProvider.resolveRefreshToken(request);
+        String accessToken = jwtTokenProvider.resolveAccessToken(request);
+        authService.logout(encryptedRefreshToken, accessToken);
+
+
+        ResultResponse result = ResultResponse.of(ResultCode.LOGOUT_SUCCESS, "logout success!");
+        return new ResponseEntity<>(result, HttpStatus.valueOf(result.getStatus()));
+    }
+
 
 }

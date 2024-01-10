@@ -1,7 +1,7 @@
 package com.tryworkout.backend.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tryworkout.backend.domain.auth.TokenDto;
+import com.tryworkout.backend.domain.auth.dto.TokenDto;
 import com.tryworkout.backend.domain.user.dto.UserDto;
 import com.tryworkout.backend.domain.user.service.UserService;
 import com.tryworkout.backend.redis.RedisUtils;

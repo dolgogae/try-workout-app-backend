@@ -1,4 +1,4 @@
-package com.tryworkout.backend.domain.auth;
+package com.tryworkout.backend.domain.auth.dto;
 
 import lombok.Builder;
 import lombok.Data;
