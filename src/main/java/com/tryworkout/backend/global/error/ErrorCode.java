@@ -37,6 +37,9 @@ public enum ErrorCode {
     ENCRYPTION_FAILED(400, "EE001", "Encryption failed"),
     DECRYPTION_FAILED(400, "EE002", "Decryption failed"),
 
+    // Reservation
+    RESERVATION_NOT_EXIST(401, "RE001", "Reservation not exist"),
+
     // GYM
     GYM_NOT_FOUND(400, "GE001", "Gym is not exist"),
 

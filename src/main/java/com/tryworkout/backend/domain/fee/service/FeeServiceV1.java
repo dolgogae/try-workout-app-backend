@@ -70,6 +70,11 @@ public class FeeServiceV1 implements FeeService{
 
     @Override
     public void deleteFee(Long feeId) {
+        Fee fee = feeJpaRepository.findById(feeId).orElseThrow(() ->
+                new BusinessException(ErrorCode.FEE_NOT_FOUND));
+        log.info("delete fee info: trainer = {}, times = {}, discountRate = {}, price = {}",
+                fee.getTrainer().getId(), fee.getTimes(), fee.getDiscountRate(), fee.getPrice());
+
         feeJpaRepository.deleteById(feeId);
     }
 }

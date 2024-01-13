@@ -9,8 +9,10 @@ import com.tryworkout.backend.domain.user.repository.UserJpaRepository;
 import com.tryworkout.backend.global.error.ErrorCode;
 import com.tryworkout.backend.global.error.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class MemberServiceV1 implements MemberService{
@@ -34,5 +36,21 @@ public class MemberServiceV1 implements MemberService{
                 .build();
 
         return result;
+    }
+
+    @Override
+    public MemberDto deleteMember(Long memberId) {
+        Member member = memberJpaRepository.findById(memberId).orElseThrow(() ->
+                new BusinessException(ErrorCode.USER_NOT_EXIST));
+
+        MemberDto memberDto = MemberDto.builder()
+                .userId(member.getUser().getId())
+                .exercisePeriodYear(member.getExercisePeriodYear())
+                .id(memberId)
+                .build();
+        log.info(String.valueOf(memberDto));
+
+        memberJpaRepository.deleteById(memberId);
+        return memberDto;
     }
 }

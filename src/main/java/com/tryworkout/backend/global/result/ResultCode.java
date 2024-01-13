@@ -24,6 +24,7 @@ public enum ResultCode {
 
     // MEMBER
     MEMBER_CREATE_SUCCESS(201, "M001", "멤버 생성을 성공했습니다."),
+    MEMBER_DELETE_SUCCESS(200, "M002", "멤버 삭제를 성공했습니다."),
 
     // GYM
     GET_GYM_SUCCESS(200, "G001", "체육관을 가져오는데 성공했습니다."),
@@ -39,6 +40,7 @@ public enum ResultCode {
     // RESERVATION
     RESERVATION_REGISTER_SUCCESS(201, "R001", "예약을 성공했습니다."),
     RESERVATION_DELETE_SUCCESS(200, "R002", "예약을 삭제했습니다."),
+    FIND_RESERVATION_SUCCESS(200, "R003", "예약 조회에 성공했습니다."),
 
     // REVIEW
     REVIEW_CREATE_SUCCESS(201, "RV001", "리뷰 등록에 성공했습니다."),
