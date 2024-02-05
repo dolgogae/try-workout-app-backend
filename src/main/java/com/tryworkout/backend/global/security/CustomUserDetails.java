@@ -1,4 +1,4 @@
-package com.tryworkout.backend.security;
+package com.tryworkout.backend.global.security;
 
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import lombok.Getter;

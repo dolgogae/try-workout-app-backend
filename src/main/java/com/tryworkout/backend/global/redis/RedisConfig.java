@@ -1,4 +1,4 @@
-package com.tryworkout.backend.redis;
+package com.tryworkout.backend.global.redis;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

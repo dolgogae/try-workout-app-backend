@@ -1,4 +1,4 @@
-package com.tryworkout.backend.redis;
+package com.tryworkout.backend.global.redis;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;

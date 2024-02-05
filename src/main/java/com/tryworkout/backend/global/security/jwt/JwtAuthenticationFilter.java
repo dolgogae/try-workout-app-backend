@@ -1,12 +1,12 @@
-package com.tryworkout.backend.security.jwt;
+package com.tryworkout.backend.global.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tryworkout.backend.domain.auth.dto.TokenDto;
 import com.tryworkout.backend.domain.user.dto.UserDto;
 import com.tryworkout.backend.domain.user.service.UserService;
 import com.tryworkout.backend.global.config.AES128Config;
-import com.tryworkout.backend.redis.RedisUtils;
-import com.tryworkout.backend.security.CustomUserDetails;
+import com.tryworkout.backend.global.security.CustomUserDetails;
+import com.tryworkout.backend.global.redis.RedisUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;

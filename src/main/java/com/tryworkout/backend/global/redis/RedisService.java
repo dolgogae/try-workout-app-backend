@@ -1,4 +1,4 @@
-package com.tryworkout.backend.redis;
+package com.tryworkout.backend.global.redis;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

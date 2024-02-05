@@ -1,4 +1,4 @@
-package com.tryworkout.backend.redis;
+package com.tryworkout.backend.global.redis;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.tryworkout.backend.redis;
+package com.tryworkout.backend.global.redis;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

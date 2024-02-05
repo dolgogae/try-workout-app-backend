@@ -1,4 +1,4 @@
-package com.tryworkout.backend.security.handler;
+package com.tryworkout.backend.global.security.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;

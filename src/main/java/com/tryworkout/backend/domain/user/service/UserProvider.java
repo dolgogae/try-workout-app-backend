@@ -2,7 +2,7 @@ package com.tryworkout.backend.domain.user.service;
 
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import com.tryworkout.backend.domain.user.repository.UserJpaRepository;
-import com.tryworkout.backend.security.jwt.JwtTokenProvider;
+import com.tryworkout.backend.global.security.jwt.JwtTokenProvider;
 import com.tryworkout.backend.global.config.AES128Config;
 import com.tryworkout.backend.global.error.ErrorCode;
 import com.tryworkout.backend.global.error.exception.BusinessException;

@@ -1,7 +1,7 @@
-package com.tryworkout.backend.security.jwt;
+package com.tryworkout.backend.global.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tryworkout.backend.redis.RedisUtils;
+import com.tryworkout.backend.global.redis.RedisUtils;
 import com.tryworkout.backend.global.error.ErrorResponse;
 import com.tryworkout.backend.global.error.exception.AuthenticationNotFoundException;
 import com.tryworkout.backend.global.error.exception.BusinessException;

@@ -1,6 +1,7 @@
-package com.tryworkout.backend.security.jwt;
+package com.tryworkout.backend.global.security.jwt;
 
 import com.tryworkout.backend.domain.auth.dto.TokenDto;
+import com.tryworkout.backend.global.security.CustomUserDetails;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.io.Encoders;
@@ -8,7 +9,6 @@ import io.jsonwebtoken.security.Keys;
 import com.tryworkout.backend.global.error.ErrorCode;
 import com.tryworkout.backend.global.error.ErrorResponse;
 import com.tryworkout.backend.global.error.exception.BusinessException;
-import com.tryworkout.backend.security.CustomUserDetails;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,4 +1,4 @@
-package com.tryworkout.backend.global.result;
+package com.tryworkout.backend.global.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
