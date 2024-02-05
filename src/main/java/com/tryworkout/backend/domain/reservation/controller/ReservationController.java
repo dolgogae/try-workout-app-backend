@@ -53,8 +53,6 @@ public class ReservationController {
         return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
 
-
-
     @DeleteMapping("/{reservationId}")
     public ResponseEntity<ResultResponse> deleteReservation(
             @PathVariable Long reservationId

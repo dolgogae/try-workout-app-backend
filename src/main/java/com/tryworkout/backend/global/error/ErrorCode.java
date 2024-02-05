@@ -46,6 +46,9 @@ public enum ErrorCode {
     // FEE
     FEE_NOT_FOUND(400, "FE001", "FEE is not exist"),
 
+    // REVIEW
+    REVIEW_NOT_FOUNT(200, "RE001", "Review not found"),
+
     // IMAGE
     IMAGE_TYPE_NOT_MATCHING(400, "IE001", "Image type is not matching"),
     IMAGE_EMPTY(400, "IE002", "Failed to store empty file"),

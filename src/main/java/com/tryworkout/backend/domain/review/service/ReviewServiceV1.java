@@ -49,6 +49,11 @@ public class ReviewServiceV1 implements ReviewService{
 
     @Override
     public void deleteReview(Long reviewId) {
+        Review review = reviewJpaRepository.findById(reviewId).orElseThrow(() ->
+                new BusinessException(ErrorCode.REVIEW_NOT_FOUNT));
+        ReviewDto reviewDto = makeReviewDto(review);
+        log.info(String.valueOf(reviewDto));
+
         reviewJpaRepository.deleteById(reviewId);
     }
 }
