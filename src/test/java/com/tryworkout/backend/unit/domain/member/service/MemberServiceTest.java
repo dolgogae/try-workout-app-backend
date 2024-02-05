@@ -5,7 +5,6 @@ import com.tryworkout.backend.domain.member.dto.MemberCreateDto;
 import com.tryworkout.backend.domain.member.dto.MemberDto;
 import com.tryworkout.backend.domain.member.repository.MemberJpaRepository;
 import com.tryworkout.backend.domain.member.service.MemberService;
-import com.tryworkout.backend.domain.member.service.MemberServiceV1;
 import com.tryworkout.backend.domain.user.enums.AccountType;
 import com.tryworkout.backend.domain.user.enums.UserRole;
 import com.tryworkout.backend.domain.user.data.UserEntity;
@@ -24,7 +23,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.util.ReflectionTestUtils.setField;
 
 @SpringBootTest
-class MemberServiceV1Test {
+class MemberServiceTest {
 
     @Mock
     UserJpaRepository userJpaRepository;
@@ -34,7 +33,7 @@ class MemberServiceV1Test {
     MemberService memberService;
     @BeforeEach
     void before(){
-        memberService = new MemberServiceV1(userJpaRepository, memberJpaRepository);
+        memberService = new MemberService(userJpaRepository, memberJpaRepository);
     }
 
     @Test

@@ -1,9 +1,9 @@
 package com.tryworkout.backend.domain.user.controller;
 
-import com.tryworkout.backend.domain.user.service.UserService;
 import com.tryworkout.backend.domain.user.dto.UserDto;
 import com.tryworkout.backend.domain.user.dto.UserResponseDto;
 import com.tryworkout.backend.domain.user.service.UserProvider;
+import com.tryworkout.backend.domain.user.service.UserService;
 import com.tryworkout.backend.global.result.ResultCode;
 import com.tryworkout.backend.global.result.ResultResponse;
 import lombok.RequiredArgsConstructor;

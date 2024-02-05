@@ -1,4 +1,4 @@
-package com.tryworkout.backend.domain.trainer;
+package com.tryworkout.backend.domain.trainer.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

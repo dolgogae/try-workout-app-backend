@@ -1,6 +1,7 @@
 package com.tryworkout.backend.security;
 
 import com.tryworkout.backend.domain.user.service.UserService;
+import com.tryworkout.backend.global.config.AES128Config;
 import com.tryworkout.backend.redis.RedisUtils;
 import com.tryworkout.backend.security.handler.CustomAccessDeniedHandler;
 import com.tryworkout.backend.security.handler.LoginFailureHandler;
@@ -8,7 +9,6 @@ import com.tryworkout.backend.security.handler.LoginSuccessHandler;
 import com.tryworkout.backend.security.jwt.JwtAuthenticationFilter;
 import com.tryworkout.backend.security.jwt.JwtTokenProvider;
 import com.tryworkout.backend.security.jwt.JwtVerificationFilter;
-import com.tryworkout.backend.global.config.AES128Config;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;

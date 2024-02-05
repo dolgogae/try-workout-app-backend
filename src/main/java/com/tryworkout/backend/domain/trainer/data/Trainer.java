@@ -5,7 +5,7 @@ import com.tryworkout.backend.domain.fee.data.Fee;
 import com.tryworkout.backend.domain.filestorage.data.TrainerImage;
 import com.tryworkout.backend.domain.filestorage.data.Qualification;
 import com.tryworkout.backend.domain.reservation.data.Reservation;
-import com.tryworkout.backend.domain.trainer.TrainerType;
+import com.tryworkout.backend.domain.trainer.enums.TrainerType;
 import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import lombok.Builder;

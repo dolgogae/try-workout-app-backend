@@ -5,7 +5,6 @@ import com.tryworkout.backend.domain.fee.dto.FeeCreateDto;
 import com.tryworkout.backend.domain.fee.dto.FeeDto;
 import com.tryworkout.backend.domain.fee.repository.FeeJpaRepository;
 import com.tryworkout.backend.domain.fee.service.FeeService;
-import com.tryworkout.backend.domain.fee.service.FeeServiceV1;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
 import com.tryworkout.backend.domain.trainer.repository.TrainerJpaRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,7 +26,7 @@ import static org.springframework.test.util.ReflectionTestUtils.setField;
 
 @SpringBootTest
 @Transactional
-class FeeServiceV1Test {
+class FeeServiceTest {
 
     @Autowired
     FeeService feeService;
@@ -47,7 +46,7 @@ class FeeServiceV1Test {
     void before(){
         trainer = new Trainer();
         setField(trainer, "id", 1L);
-        feeServiceMocked = new FeeServiceV1(
+        feeServiceMocked = new FeeService(
                 feeJpaRepository, trainerJpaRepository, mapper);
         FeeCreateDto feeCreateDto = FeeCreateDto.builder()
                 .times(10)
