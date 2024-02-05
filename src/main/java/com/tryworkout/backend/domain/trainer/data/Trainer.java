@@ -1,22 +1,20 @@
 package com.tryworkout.backend.domain.trainer.data;
 
-import com.tryworkout.backend.domain.gym.data.Gym;
+import com.tryworkout.backend.domain.BaseEntity;
 import com.tryworkout.backend.domain.fee.data.Fee;
-import com.tryworkout.backend.domain.filestorage.data.TrainerImage;
 import com.tryworkout.backend.domain.filestorage.data.Qualification;
+import com.tryworkout.backend.domain.filestorage.data.TrainerImage;
+import com.tryworkout.backend.domain.gym.data.Gym;
 import com.tryworkout.backend.domain.reservation.data.Reservation;
-import com.tryworkout.backend.domain.trainer.enums.TrainerType;
 import com.tryworkout.backend.domain.trainer.dto.TrainerCreateDto;
+import com.tryworkout.backend.domain.trainer.enums.TrainerType;
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +23,7 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "TRAINER")
 @EntityListeners(AuditingEntityListener.class)
-public class Trainer {
+public class Trainer extends BaseEntity {
 
     @Id
     @Column(name = "TRAINER_ID")
@@ -75,12 +73,6 @@ public class Trainer {
             orphanRemoval = true
     )
     private List<Reservation> reservations = new ArrayList<>();
-
-    @CreatedDate
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
 
     @Builder
     private Trainer(UserEntity user, String introduction, Gym gym, TrainerType trainerType) {

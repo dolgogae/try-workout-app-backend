@@ -1,19 +1,17 @@
 package com.tryworkout.backend.domain.user.data;
 
+import com.tryworkout.backend.domain.BaseEntity;
 import com.tryworkout.backend.domain.member.data.Member;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
+import com.tryworkout.backend.domain.user.dto.UserDto;
 import com.tryworkout.backend.domain.user.enums.AccountType;
 import com.tryworkout.backend.domain.user.enums.UserRole;
-import com.tryworkout.backend.domain.user.dto.UserDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -21,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "USER")
 @EntityListeners(AuditingEntityListener.class)
-public class UserEntity {
+public class UserEntity extends BaseEntity {
 
     @Id
     @Column(name = "USER_ID")
@@ -59,12 +57,6 @@ public class UserEntity {
 
     @Column(name = "PHONE_NUMBER")
     private String phoneNumber = "";
-
-    @CreatedDate
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
 
     @Builder
     private UserEntity(String username, String email, String password,

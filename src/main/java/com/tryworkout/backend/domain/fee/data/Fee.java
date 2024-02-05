@@ -1,23 +1,21 @@
 package com.tryworkout.backend.domain.fee.data;
 
+import com.tryworkout.backend.domain.BaseEntity;
 import com.tryworkout.backend.domain.fee.dto.FeeCreateDto;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @NoArgsConstructor
 @Table(name = "FEE")
 @EntityListeners(AuditingEntityListener.class)
-public class Fee {
+public class Fee extends BaseEntity {
     @Id
     @Column(name = "FEE_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,14 +33,6 @@ public class Fee {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TRAINER_ID")
     private Trainer trainer;
-
-    @CreatedDate
-    @Column(name = "CREATED_AT")
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    @Column(name = "UPDATED_AT")
-    private LocalDateTime updatedAt;
 
     @Builder
     private Fee(Integer times, Integer price, Float discountRate, Trainer trainer) {

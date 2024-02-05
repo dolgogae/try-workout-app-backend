@@ -1,12 +1,11 @@
 package com.tryworkout.backend.domain.reservation.data;
 
+import com.tryworkout.backend.domain.BaseEntity;
 import com.tryworkout.backend.domain.member.data.Member;
 import com.tryworkout.backend.domain.trainer.data.Trainer;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -17,7 +16,7 @@ import java.time.LocalDateTime;
 @Table(name = "RESERVATION")
 @EntityListeners(AuditingEntityListener.class)
 @Entity
-public class Reservation {
+public class Reservation extends BaseEntity {
 
     @Id
     @Column(name = "RESERVATION_ID")
@@ -34,12 +33,6 @@ public class Reservation {
 
     @Column(name = "RESERVATION_TIME")
     private LocalDateTime reservationTime;
-
-    @CreatedDate
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
 
     @Builder
     private Reservation(Member member, Trainer trainer, LocalDateTime reservationTime) {

@@ -1,17 +1,15 @@
 package com.tryworkout.backend.domain.member.data;
 
+import com.tryworkout.backend.domain.BaseEntity;
 import com.tryworkout.backend.domain.reservation.data.Reservation;
 import com.tryworkout.backend.domain.review.data.Review;
 import com.tryworkout.backend.domain.user.data.UserEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +18,7 @@ import java.util.List;
 @Table(name = "MEMBER")
 @EntityListeners(AuditingEntityListener.class)
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @Column(name = "MEMBER_ID")
@@ -47,12 +45,6 @@ public class Member {
             orphanRemoval = true
     )
     private List<Reservation> reservations = new ArrayList<>();
-
-    @CreatedDate
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
 
     @Builder
     private Member(UserEntity user, Integer exercisePeriodYear) {

@@ -1,5 +1,6 @@
 package com.tryworkout.backend.domain.gym.data;
 
+import com.tryworkout.backend.domain.BaseEntity;
 import com.tryworkout.backend.domain.gym.dto.GymCreateDto;
 import com.tryworkout.backend.domain.gym.dto.GymFeeUpdateDto;
 import com.tryworkout.backend.domain.gym.dto.GymInfoUpdateDto;
@@ -8,12 +9,9 @@ import com.tryworkout.backend.domain.trainer.data.Trainer;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +20,7 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "GYM")
 @EntityListeners(AuditingEntityListener.class)
-public class Gym {
+public class Gym extends BaseEntity {
 
     @Id
     @Column(name = "GYM_ID")
@@ -80,14 +78,6 @@ public class Gym {
             orphanRemoval = true
     )
     private List<Trainer> trainers = new ArrayList<>();
-
-    @CreatedDate
-    @Column(name = "CREATED_AT")
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    @Column(name = "UPDATED_AT")
-    private LocalDateTime updatedAt;
 
     @Builder
     private Gym(String gymName, String address, String roadAddress, Float mapX, Float mapY) {
