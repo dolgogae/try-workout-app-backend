@@ -33,9 +33,9 @@ public enum ResultCode {
 
     // FEE
     FEE_CREATE_SUCCESS(201, "F001", "요금 정보 생성을 성공했습니다." ),
-    FEE_READ_SUCCESS(200, "F001", "요금 정보 조회를 성공했습니다." ),
-    FEE_UPDATE_SUCCESS(200, "F002", "요금 정보 업데이트를 성공했습니다." ),
-    FEE_DELETE_SUCCESS(200, "F003", "요금 삭제를 성공했습니다."),
+    FEE_READ_SUCCESS(200, "F002", "요금 정보 조회를 성공했습니다." ),
+    FEE_UPDATE_SUCCESS(200, "F003", "요금 정보 업데이트를 성공했습니다." ),
+    FEE_DELETE_SUCCESS(200, "F004", "요금 삭제를 성공했습니다."),
 
     // RESERVATION
     RESERVATION_REGISTER_SUCCESS(201, "R001", "예약을 성공했습니다."),

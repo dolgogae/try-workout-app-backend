@@ -56,12 +56,12 @@ public class FeeController {
         FeeResponseDto feeResponseDto = mapper.map(feeDto, FeeResponseDto.class);
 
         ResultResponse result = ResultResponse.of(ResultCode.FEE_UPDATE_SUCCESS, feeResponseDto);
-        return new ResponseEntity<>(result, HttpStatus.CREATED);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @DeleteMapping
     @PreAuthorize("hasRole('ROLE_TRAINER')")
-    public ResponseEntity<ResultResponse> updateDiscountRate(
+    public ResponseEntity<ResultResponse> deleteDiscountRate(
             @RequestBody Long feeId
     ){
         feeService.deleteFee(feeId);

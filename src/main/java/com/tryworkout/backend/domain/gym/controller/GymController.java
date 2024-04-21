@@ -28,6 +28,11 @@ public class GymController {
     private final GymService gymService;
     private final NaverSearchClient naverSearchClient;
 
+    /**
+     *
+     * @param query :
+     * @return
+     */
     @PostMapping("/list")
     public ResponseEntity<ResultResponse> getGymFromNaverApi (
             @RequestBody String query
